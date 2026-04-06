@@ -339,12 +339,42 @@ function formatAttack(attack) {
     const action = actions[0];
     const atkBonus = action.attackBonus || "";
     const dmgParts = action.damage?.parts || [];
-    const dmgStr = dmgParts.map(p => p.formula || p[0] || "").filter(Boolean).join(" plus ");
+    const dmgStr = dmgParts
+      .map(p => translateFormula(p.formula || p[0] || ""))
+      .filter(Boolean)
+      .join(" plus ");
     if (atkBonus || dmgStr) {
       return `${name} ${formatBonus(parseInt(atkBonus) || 0)}${dmgStr ? ` (${dmgStr})` : ""}`;
     }
   }
   return name;
+}
+
+/**
+ * Translate Foundry roll formulas into standard display notation.
+ * - sizeRoll(numDice, dieStep, @size, strBonus) → e.g. "1d6+4"
+ * - Fixes "ft," → "ft.", "dc" → "DC"
+ */
+function translateFormula(formula) {
+  if (!formula) return "";
+
+  // Translate sizeRoll(numDice, dieStep, @size, strBonus) → NdX+bonus
+  let result = formula.replace(
+    /sizeRoll\(\s*(\d+)\s*,\s*(\d+)\s*,\s*@size\s*,\s*(\d+)\s*\)/gi,
+    (match, numDice, dieStep, bonus) => {
+      const dice = `${numDice}d${dieStep}`;
+      const b = parseInt(bonus);
+      if (b > 0) return `${dice}+${b}`;
+      if (b < 0) return `${dice}${b}`;
+      return dice;
+    }
+  );
+
+  // Fix "ft," → "ft." and lowercase "dc" → "DC"
+  result = result.replace(/\bft,/g, "ft.");
+  result = result.replace(/\bdc\b/gi, "DC");
+
+  return result;
 }
 
 function formatSpells(actor) {
@@ -422,7 +452,20 @@ function formatSkills(actor) {
 
 function getItemsByType(actor, type) {
   const items = actor.items?.contents || actor.items || [];
-  return items.filter(i => i.type === type);
+  return items.filter(i => i.type === type).filter(i => !isExcludedFeat(i));
+}
+
+/**
+ * Exclude feats/features with "Miscellaneous" in the name
+ * or "SBC" in the description — these are Foundry-internal only.
+ */
+function isExcludedFeat(item) {
+  if (item.type !== "feat") return false;
+  const name = item.name || "";
+  if (name.toLowerCase().includes("miscellaneous")) return true;
+  const desc = item.system?.description?.value || "";
+  if (desc.toUpperCase().includes("SBC")) return true;
+  return false;
 }
 
 function getCreatureType(actor) {
