@@ -1,0 +1,81 @@
+{
+  "folder": "jTJ2DCDEgvOkp09x",
+  "type": "buff",
+  "name": "Frico Montasio",
+  "system": {
+    "description": {
+      "value": "",
+      "instructions": ""
+    },
+    "tags": [],
+    "changes": [],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [
+      {
+        "text": "+[[1]] Performance Combat checks",
+        "target": "skill.prf"
+      }
+    ],
+    "actions": [],
+    "attackNotes": [],
+    "effectNotes": [],
+    "uses": {
+      "value": null,
+      "per": "",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "links": {
+      "children": []
+    },
+    "tag": "",
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "subType": "misc",
+    "active": false,
+    "level": 0,
+    "duration": {
+      "value": null,
+      "units": "",
+      "end": ""
+    },
+    "conditions": [],
+    "hideFromToken": false,
+    "showInQuickbar": false
+  },
+  "img": "assets/OIP-2254078485.jpg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "JteyssDE45FXYRAt": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Item.8E12rdH9wY5qC6cf",
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.11",
+    "createdTime": 1775509838124,
+    "modifiedTime": 1775509838124,
+    "lastModifiedBy": "JteyssDE45FXYRAt"
+  },
+  "_id": "ZuYDM2e3PDYvK8vi",
+  "_key": "!items!ZuYDM2e3PDYvK8vi"
+}

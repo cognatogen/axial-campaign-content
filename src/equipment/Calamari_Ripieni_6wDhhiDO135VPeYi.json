@@ -1,0 +1,85 @@
+{
+  "folder": "jTJ2DCDEgvOkp09x",
+  "type": "buff",
+  "name": "Calamari Ripieni",
+  "system": {
+    "description": {
+      "value": "",
+      "instructions": ""
+    },
+    "tags": [],
+    "changes": [
+      {
+        "type": "untyped",
+        "_id": "Nr8j3LfC",
+        "operator": "add",
+        "priority": 0,
+        "formula": "2",
+        "target": "will"
+      }
+    ],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [],
+    "actions": [],
+    "attackNotes": [],
+    "effectNotes": [],
+    "uses": {
+      "value": null,
+      "per": "",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "links": {
+      "children": []
+    },
+    "tag": "",
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "subType": "misc",
+    "active": false,
+    "level": 0,
+    "duration": {
+      "value": null,
+      "units": "",
+      "end": ""
+    },
+    "conditions": [],
+    "hideFromToken": false,
+    "showInQuickbar": false
+  },
+  "img": "assets/OIP-2403301867.jpg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "JteyssDE45FXYRAt": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Item.RlJytsumuAb3iqBk",
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.11",
+    "createdTime": 1775509838124,
+    "modifiedTime": 1775509838124,
+    "lastModifiedBy": "JteyssDE45FXYRAt"
+  },
+  "_id": "6wDhhiDO135VPeYi",
+  "_key": "!items!6wDhhiDO135VPeYi"
+}

@@ -1,0 +1,85 @@
+{
+  "folder": "jTJ2DCDEgvOkp09x",
+  "type": "buff",
+  "name": "Pizza Margherita",
+  "system": {
+    "description": {
+      "value": "",
+      "instructions": ""
+    },
+    "tags": [],
+    "changes": [
+      {
+        "type": "untyped",
+        "_id": "fwd6tqlH",
+        "operator": "add",
+        "priority": 0,
+        "target": "cha",
+        "formula": "1"
+      }
+    ],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [],
+    "actions": [],
+    "attackNotes": [],
+    "effectNotes": [],
+    "uses": {
+      "value": null,
+      "per": "",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "links": {
+      "children": []
+    },
+    "tag": "",
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "subType": "misc",
+    "active": false,
+    "level": 0,
+    "duration": {
+      "value": null,
+      "units": "",
+      "end": ""
+    },
+    "conditions": [],
+    "hideFromToken": false,
+    "showInQuickbar": false
+  },
+  "_id": "XVJPE0oMUaHedyoz",
+  "img": "assets/margherita-pizza-recipe-04-3834413752.jpg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "JteyssDE45FXYRAt": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.11",
+    "createdTime": 1775509838124,
+    "modifiedTime": 1775509838124,
+    "lastModifiedBy": "JteyssDE45FXYRAt"
+  },
+  "_key": "!items!XVJPE0oMUaHedyoz"
+}

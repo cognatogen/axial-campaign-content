@@ -1,0 +1,93 @@
+{
+  "folder": "jTJ2DCDEgvOkp09x",
+  "type": "buff",
+  "name": "Bistecca alla Fiorentina",
+  "system": {
+    "description": {
+      "value": "",
+      "instructions": ""
+    },
+    "tags": [],
+    "changes": [
+      {
+        "type": "untyped",
+        "_id": "fwd6tqlH",
+        "operator": "add",
+        "priority": 0,
+        "target": "vigor",
+        "formula": "5"
+      },
+      {
+        "type": "untyped",
+        "_id": "j5aqXptB",
+        "operator": "add",
+        "priority": 0,
+        "formula": "2",
+        "target": "wounds"
+      }
+    ],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [],
+    "actions": [],
+    "attackNotes": [],
+    "effectNotes": [],
+    "uses": {
+      "value": null,
+      "per": "",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "links": {
+      "children": []
+    },
+    "tag": "",
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "subType": "misc",
+    "active": false,
+    "level": 0,
+    "duration": {
+      "value": null,
+      "units": "",
+      "end": ""
+    },
+    "conditions": [],
+    "hideFromToken": false,
+    "showInQuickbar": false
+  },
+  "img": "assets/OIP-1290256233.jpg",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "JteyssDE45FXYRAt": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Item.8E12rdH9wY5qC6cf",
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.11",
+    "createdTime": 1775509838124,
+    "modifiedTime": 1775509838124,
+    "lastModifiedBy": "JteyssDE45FXYRAt"
+  },
+  "_id": "0OT8nPH1KfvfRsF0",
+  "_key": "!items!0OT8nPH1KfvfRsF0"
+}

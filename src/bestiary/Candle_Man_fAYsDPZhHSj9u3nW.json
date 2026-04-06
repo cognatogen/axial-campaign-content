@@ -464,7 +464,7 @@
       "age": "",
       "alignment": "ne",
       "biography": {
-        "value": "<div class=\"statblockContainer\" style=\"margin-top:15px\"><p>A staggering corpse drenched in red wax stands still in the dark waiting for the lost and curious to approach.</p><p><em>\"Candle Man lights his candles, waiting for his cattle...\"</em></p></div>"
+        "value": "<div class=\"statblockContainer\" style=\"margin-top:15px\"><p>A staggering corpse drenched in red wax stands still in the dark waiting for the lost and curious to approach.</p><p>Image: <em>\"Candle Man lights his candles, waiting for his cattle...\"</em></p></div>"
       },
       "bonusFeatFormula": "1",
       "bonusSkillRankFormula": "",
@@ -913,7 +913,7 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p>A Candle man has poor reflexes and can only perform a single move action or standard action each round (it has the staggered condition.) A zombie can move up to its speed and attack in the same round as a charge action.</p>",
+          "value": "<p>A Candle Man has poor reflexes and can perform only a single move action or standard action each round (it has the @UUID[Actor.IxlFGuxK8cwqUoJ4.Item.g62tDEJGBogKvWup]{staggered} condition). A Candle Man can move up to its speed and attack in the same round as a charge action.</p>",
           "instructions": ""
         },
         "tags": [],
@@ -969,7 +969,47 @@
         "simple": false,
         "summons": false,
         "disabled": false,
-        "classSkills": {}
+        "classSkills": {
+          "acr": false,
+          "apr": false,
+          "art": false,
+          "blf": false,
+          "clm": false,
+          "crf": false,
+          "dip": false,
+          "dev": false,
+          "dis": false,
+          "esc": false,
+          "fly": false,
+          "han": false,
+          "hea": false,
+          "int": false,
+          "kar": false,
+          "kdu": false,
+          "ken": false,
+          "kge": false,
+          "khi": false,
+          "klo": false,
+          "kna": false,
+          "kno": false,
+          "kpl": false,
+          "kre": false,
+          "lin": false,
+          "lor": false,
+          "per": false,
+          "prf": false,
+          "pro": false,
+          "rid": false,
+          "sen": false,
+          "slt": false,
+          "spl": false,
+          "ste": false,
+          "sur": false,
+          "swm": false,
+          "umd": false
+        },
+        "showInCombat": false,
+        "class": ""
       },
       "img": "systems/pf1/icons/skills/yellow_36.jpg",
       "_id": "g62tDEJGBogKvWup",
@@ -988,7 +1028,8 @@
         "coreVersion": "13.351",
         "systemId": "pf1",
         "systemVersion": "11.11",
-        "lastModifiedBy": null
+        "lastModifiedBy": "JteyssDE45FXYRAt",
+        "modifiedTime": 1775500136078
       },
       "_key": "!actors.items!fAYsDPZhHSj9u3nW.g62tDEJGBogKvWup"
     },
@@ -997,7 +1038,7 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p>A candle man gives of light as a candle (5ft Radius that illuminates the area by one light level up to normal light) while under dim light the Candle man gains a +20 stealth check to not reveal itself.</p>",
+          "value": "<p>A Candle Man gives off light as a candle (5ft. radius illuminating the area by one light level, up to normal light). While in dim lighting the Candle Man gains a +20 bonus on stealth check to avoid being seen.</p>",
           "instructions": ""
         },
         "tags": [],
@@ -1053,7 +1094,47 @@
         "simple": false,
         "summons": false,
         "disabled": false,
-        "classSkills": {}
+        "classSkills": {
+          "acr": false,
+          "apr": false,
+          "art": false,
+          "blf": false,
+          "clm": false,
+          "crf": false,
+          "dip": false,
+          "dev": false,
+          "dis": false,
+          "esc": false,
+          "fly": false,
+          "han": false,
+          "hea": false,
+          "int": false,
+          "kar": false,
+          "kdu": false,
+          "ken": false,
+          "kge": false,
+          "khi": false,
+          "klo": false,
+          "kna": false,
+          "kno": false,
+          "kpl": false,
+          "kre": false,
+          "lin": false,
+          "lor": false,
+          "per": false,
+          "prf": false,
+          "pro": false,
+          "rid": false,
+          "sen": false,
+          "slt": false,
+          "spl": false,
+          "ste": false,
+          "sur": false,
+          "swm": false,
+          "umd": false
+        },
+        "showInCombat": false,
+        "class": ""
       },
       "img": "systems/pf1/icons/skills/yellow_36.jpg",
       "_id": "F5ChBIsdF6jl8cSZ",
@@ -1072,7 +1153,8 @@
         "coreVersion": "13.351",
         "systemId": "pf1",
         "systemVersion": "11.11",
-        "lastModifiedBy": null
+        "lastModifiedBy": "JteyssDE45FXYRAt",
+        "modifiedTime": 1775500031060
       },
       "_key": "!actors.items!fAYsDPZhHSj9u3nW.F5ChBIsdF6jl8cSZ"
     },
@@ -1081,7 +1163,7 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p>As a standard action a Candle Man launches a wave of fire at its victims in a 15ft cone dealing 3d4 fire damage (reflex save DC12 for half)</p>",
+          "value": "<p>As a standard action, a Candle Man may launch a wave of fire in a 15ft. cone, dealing 3d4 fire damage (Reflex save DC12 for half).</p>",
           "instructions": ""
         },
         "tags": [],
@@ -1137,7 +1219,47 @@
         "simple": false,
         "summons": false,
         "disabled": false,
-        "classSkills": {}
+        "classSkills": {
+          "acr": false,
+          "apr": false,
+          "art": false,
+          "blf": false,
+          "clm": false,
+          "crf": false,
+          "dip": false,
+          "dev": false,
+          "dis": false,
+          "esc": false,
+          "fly": false,
+          "han": false,
+          "hea": false,
+          "int": false,
+          "kar": false,
+          "kdu": false,
+          "ken": false,
+          "kge": false,
+          "khi": false,
+          "klo": false,
+          "kna": false,
+          "kno": false,
+          "kpl": false,
+          "kre": false,
+          "lin": false,
+          "lor": false,
+          "per": false,
+          "prf": false,
+          "pro": false,
+          "rid": false,
+          "sen": false,
+          "slt": false,
+          "spl": false,
+          "ste": false,
+          "sur": false,
+          "swm": false,
+          "umd": false
+        },
+        "showInCombat": false,
+        "class": ""
       },
       "img": "systems/pf1/icons/skills/yellow_36.jpg",
       "_id": "X4AJmlvjjWQhlOeS",
@@ -1156,7 +1278,8 @@
         "coreVersion": "13.351",
         "systemId": "pf1",
         "systemVersion": "11.11",
-        "lastModifiedBy": null
+        "lastModifiedBy": "JteyssDE45FXYRAt",
+        "modifiedTime": 1775499965624
       },
       "_key": "!actors.items!fAYsDPZhHSj9u3nW.X4AJmlvjjWQhlOeS"
     },
@@ -1165,7 +1288,7 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p>When a Candle Man performs a staggered charge instead of making a slam attack they may use its candle fire ability.</p>",
+          "value": "<p>When a Candle Man performs a staggered charge, it may use the @UUID[Actor.IxlFGuxK8cwqUoJ4.Item.X4AJmlvjjWQhlOeS]{Candle Fire} ability instead of making a slam attack.</p>",
           "instructions": ""
         },
         "tags": [],
@@ -1221,7 +1344,47 @@
         "simple": false,
         "summons": false,
         "disabled": false,
-        "classSkills": {}
+        "classSkills": {
+          "acr": false,
+          "apr": false,
+          "art": false,
+          "blf": false,
+          "clm": false,
+          "crf": false,
+          "dip": false,
+          "dev": false,
+          "dis": false,
+          "esc": false,
+          "fly": false,
+          "han": false,
+          "hea": false,
+          "int": false,
+          "kar": false,
+          "kdu": false,
+          "ken": false,
+          "kge": false,
+          "khi": false,
+          "klo": false,
+          "kna": false,
+          "kno": false,
+          "kpl": false,
+          "kre": false,
+          "lin": false,
+          "lor": false,
+          "per": false,
+          "prf": false,
+          "pro": false,
+          "rid": false,
+          "sen": false,
+          "slt": false,
+          "spl": false,
+          "ste": false,
+          "sur": false,
+          "swm": false,
+          "umd": false
+        },
+        "showInCombat": false,
+        "class": ""
       },
       "img": "systems/pf1/icons/skills/yellow_36.jpg",
       "_id": "UsM4UwoxKUKssioc",
@@ -1240,7 +1403,8 @@
         "coreVersion": "13.351",
         "systemId": "pf1",
         "systemVersion": "11.11",
-        "lastModifiedBy": null
+        "lastModifiedBy": "JteyssDE45FXYRAt",
+        "modifiedTime": 1775500096549
       },
       "_key": "!actors.items!fAYsDPZhHSj9u3nW.UsM4UwoxKUKssioc"
     },
@@ -1293,7 +1457,47 @@
         "creatureSubtypes": [
           ""
         ],
-        "sources": []
+        "sources": [],
+        "quadruped": false,
+        "classSkills": {
+          "acr": false,
+          "apr": false,
+          "art": false,
+          "blf": false,
+          "clm": false,
+          "crf": false,
+          "dip": false,
+          "dev": false,
+          "dis": false,
+          "esc": false,
+          "fly": false,
+          "han": false,
+          "hea": false,
+          "int": false,
+          "kar": false,
+          "kdu": false,
+          "ken": false,
+          "kge": false,
+          "khi": false,
+          "klo": false,
+          "kna": false,
+          "kno": false,
+          "kpl": false,
+          "kre": false,
+          "lin": false,
+          "lor": false,
+          "per": false,
+          "prf": false,
+          "pro": false,
+          "rid": false,
+          "sen": false,
+          "slt": false,
+          "spl": false,
+          "ste": false,
+          "sur": false,
+          "swm": false,
+          "umd": false
+        }
       },
       "img": "systems/pf1/icons/skills/affliction_07.jpg",
       "_id": "1Qt3YdnMS54TRGlE",
@@ -1312,7 +1516,8 @@
         "coreVersion": "13.351",
         "systemId": "pf1",
         "systemVersion": "11.11",
-        "lastModifiedBy": null
+        "lastModifiedBy": "JteyssDE45FXYRAt",
+        "modifiedTime": 1775499699234
       },
       "_key": "!actors.items!fAYsDPZhHSj9u3nW.1Qt3YdnMS54TRGlE"
     },
@@ -1778,7 +1983,7 @@
       "_key": "!actors.items!fAYsDPZhHSj9u3nW.Z2ZEXIkapLwlcAl0"
     },
     {
-      "name": "Candle Fire (15ft, Cone, DC 12, 3d4 fire)",
+      "name": "Candle Fire (15ft Cone, DC 12, 3d4 fire)",
       "type": "attack",
       "system": {
         "description": {
@@ -1822,7 +2027,31 @@
         "broken": false,
         "weaponGroups": [],
         "showInQuickbar": true,
-        "size": "med"
+        "size": "med",
+        "weapon": {
+          "category": "",
+          "type": ""
+        },
+        "timeworn": false,
+        "artifact": false,
+        "material": {
+          "base": {
+            "value": "",
+            "custom": false
+          },
+          "normal": {
+            "value": "",
+            "custom": false
+          },
+          "addon": []
+        },
+        "alignments": {
+          "lawful": false,
+          "chaotic": false,
+          "good": false,
+          "evil": false
+        },
+        "class": ""
       },
       "img": "systems/pf1/icons/skills/yellow_36.jpg",
       "_id": "kyLf7X8ipcuo054s",
@@ -1845,7 +2074,8 @@
         "coreVersion": "13.351",
         "systemId": "pf1",
         "systemVersion": "11.11",
-        "lastModifiedBy": null
+        "lastModifiedBy": "JteyssDE45FXYRAt",
+        "modifiedTime": 1775499261188
       },
       "_key": "!actors.items!fAYsDPZhHSj9u3nW.kyLf7X8ipcuo054s"
     },
@@ -1997,90 +2227,6 @@
       "_key": "!actors.items!fAYsDPZhHSj9u3nW.JVxmIJNmuC2HYxPA"
     },
     {
-      "name": "Ecology",
-      "type": "feat",
-      "system": {
-        "description": {
-          "value": "<div><strong>Environment</strong>:  any</div><div><strong>Organization</strong>:  any</div><div><strong>Treasure</strong>:  Special: 60% 3 burning hand wands CL 1, (2d4-1 for each wands remaining charges) 30% 1 Burning hand CL 3 (2d4-1 for remaining charges) 10% an Eternal Wand of Burning Hands CL 3</div>",
-          "instructions": ""
-        },
-        "tags": [],
-        "actions": [],
-        "attackNotes": [],
-        "effectNotes": [],
-        "uses": {
-          "value": null,
-          "per": "",
-          "autoDeductChargesCost": "",
-          "maxFormula": "",
-          "rechargeFormula": ""
-        },
-        "changes": [],
-        "changeFlags": {
-          "immuneToMorale": false,
-          "loseDexToAC": false,
-          "noMediumEncumbrance": false,
-          "noHeavyEncumbrance": false,
-          "mediumArmorFullSpeed": false,
-          "heavyArmorFullSpeed": false,
-          "lowLightVision": false,
-          "seeInvisibility": false,
-          "seeInDarkness": false
-        },
-        "contextNotes": [],
-        "links": {
-          "children": [],
-          "charges": [],
-          "supplements": []
-        },
-        "tag": "",
-        "armorProf": [],
-        "weaponProf": [],
-        "languages": [],
-        "flags": {
-          "boolean": {},
-          "dictionary": {}
-        },
-        "scriptCalls": [],
-        "subType": "misc",
-        "traitType": "",
-        "traitCategory": "",
-        "racePoints": null,
-        "abilityType": "na",
-        "associations": {
-          "classes": []
-        },
-        "showInQuickbar": false,
-        "crOffset": "",
-        "inherited": false,
-        "acquired": false,
-        "simple": false,
-        "summons": false,
-        "disabled": false,
-        "classSkills": {}
-      },
-      "img": "icons/environment/wilderness/tree-oak.webp",
-      "_id": "vtB9L2p8wVGYeXj5",
-      "effects": [],
-      "folder": null,
-      "sort": 312500,
-      "ownership": {
-        "default": 0,
-        "JteyssDE45FXYRAt": 3
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.351",
-        "systemId": "pf1",
-        "systemVersion": "11.11",
-        "lastModifiedBy": null
-      },
-      "_key": "!actors.items!fAYsDPZhHSj9u3nW.vtB9L2p8wVGYeXj5"
-    },
-    {
       "name": "Miscellaneous Notes",
       "type": "feat",
       "system": {
@@ -2155,7 +2301,7 @@
       "_id": "L93n09bKVQthnwl2",
       "effects": [],
       "folder": null,
-      "sort": 512500,
+      "sort": 662500,
       "ownership": {
         "default": 0,
         "JteyssDE45FXYRAt": 3
@@ -2168,7 +2314,8 @@
         "coreVersion": "13.351",
         "systemId": "pf1",
         "systemVersion": "11.11",
-        "lastModifiedBy": null
+        "lastModifiedBy": "JteyssDE45FXYRAt",
+        "modifiedTime": 1775499922097
       },
       "_key": "!actors.items!fAYsDPZhHSj9u3nW.L93n09bKVQthnwl2"
     },
@@ -2409,6 +2556,132 @@
       "folder": null,
       "sort": 0,
       "_key": "!actors.items!fAYsDPZhHSj9u3nW.aNGjdtIlbIrd1W6C"
+    },
+    {
+      "name": "Ecology",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<div><p><strong>Environment</strong>: any</p></div><div><p><strong>Organization</strong>: any</p></div><div><p><strong>Treasure</strong>: Special: 60% 1d3 Wand of Burning Hands CL 1 (2d4-1 charges), 30% 1 Wand of Burning Hands CL 3 (2d4-1 charges), 10% Eternal Wand of Burning Hands CL 3</p></div>",
+          "instructions": ""
+        },
+        "tags": [],
+        "actions": [],
+        "attackNotes": [],
+        "effectNotes": [],
+        "uses": {
+          "value": null,
+          "per": "",
+          "autoDeductChargesCost": "",
+          "maxFormula": "",
+          "rechargeFormula": ""
+        },
+        "changes": [],
+        "changeFlags": {
+          "immuneToMorale": false,
+          "loseDexToAC": false,
+          "noMediumEncumbrance": false,
+          "noHeavyEncumbrance": false,
+          "mediumArmorFullSpeed": false,
+          "heavyArmorFullSpeed": false,
+          "lowLightVision": false,
+          "seeInvisibility": false,
+          "seeInDarkness": false
+        },
+        "contextNotes": [],
+        "links": {
+          "children": [],
+          "charges": [],
+          "supplements": []
+        },
+        "tag": "",
+        "armorProf": [],
+        "weaponProf": [],
+        "languages": [],
+        "flags": {
+          "boolean": {},
+          "dictionary": {}
+        },
+        "scriptCalls": [],
+        "subType": "misc",
+        "traitType": "",
+        "traitCategory": "",
+        "racePoints": null,
+        "abilityType": "na",
+        "associations": {
+          "classes": []
+        },
+        "showInQuickbar": false,
+        "crOffset": "",
+        "inherited": false,
+        "acquired": false,
+        "simple": false,
+        "summons": false,
+        "disabled": false,
+        "classSkills": {
+          "acr": false,
+          "apr": false,
+          "art": false,
+          "blf": false,
+          "clm": false,
+          "crf": false,
+          "dip": false,
+          "dev": false,
+          "dis": false,
+          "esc": false,
+          "fly": false,
+          "han": false,
+          "hea": false,
+          "int": false,
+          "kar": false,
+          "kdu": false,
+          "ken": false,
+          "kge": false,
+          "khi": false,
+          "klo": false,
+          "kna": false,
+          "kno": false,
+          "kpl": false,
+          "kre": false,
+          "lin": false,
+          "lor": false,
+          "per": false,
+          "prf": false,
+          "pro": false,
+          "rid": false,
+          "sen": false,
+          "slt": false,
+          "spl": false,
+          "ste": false,
+          "sur": false,
+          "swm": false,
+          "umd": false
+        },
+        "showInCombat": false,
+        "class": ""
+      },
+      "img": "icons/environment/wilderness/tree-oak.webp",
+      "effects": [],
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.axial-campaign-content.bestiary.Actor.fAYsDPZhHSj9u3nW.Item.vtB9L2p8wVGYeXj5",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.11",
+        "createdTime": 1775499916426,
+        "modifiedTime": 1775500258572,
+        "lastModifiedBy": "JteyssDE45FXYRAt"
+      },
+      "ownership": {
+        "default": 0,
+        "JteyssDE45FXYRAt": 3
+      },
+      "_id": "G4GBX2te41PyXjLk",
+      "folder": null,
+      "sort": 712500,
+      "_key": "!actors.items!fAYsDPZhHSj9u3nW.G4GBX2te41PyXjLk"
     }
   ],
   "effects": [],
@@ -2432,7 +2705,7 @@
     "systemId": "pf1",
     "systemVersion": "11.11",
     "createdTime": 1775443358320,
-    "modifiedTime": 1775460708399,
+    "modifiedTime": 1775501778854,
     "lastModifiedBy": "JteyssDE45FXYRAt"
   },
   "_id": "fAYsDPZhHSj9u3nW",

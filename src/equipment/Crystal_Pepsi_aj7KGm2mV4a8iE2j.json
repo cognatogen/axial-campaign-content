@@ -1,0 +1,87 @@
+{
+  "folder": "WAT4UNUs4ISR9YuS",
+  "type": "buff",
+  "name": "Crystal Pepsi",
+  "system": {
+    "description": {
+      "value": "<p>Grants @UUID[Actor.BCZa5uAZoHemTQFV.Item.oylikodnyku2zewu]{Invisibility} (as the spell) and the <strong>staggered</strong> condition.</p>",
+      "instructions": ""
+    },
+    "tags": [],
+    "changes": [],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [],
+    "actions": [],
+    "attackNotes": [],
+    "effectNotes": [],
+    "uses": {
+      "value": null,
+      "per": "",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "links": {
+      "children": []
+    },
+    "tag": "",
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [
+      {
+        "category": "toggle",
+        "type": "script",
+        "_id": "8wM7K9AZ",
+        "name": "Toggle Invis",
+        "img": null,
+        "value": "const conditions = [\"invisible\", \"staggered\"];\n\nfor (const conditionKey of conditions) {\n  if (typeof actor.toggleCondition === \"function\") {\n    await actor.toggleCondition(conditionKey);\n  } else {\n    const current = actor.system.conditions?.[conditionKey] ?? false;\n    await actor.update({ [`system.conditions.${conditionKey}`]: !current });\n  }\n}",
+        "hidden": false
+      }
+    ],
+    "subType": "item",
+    "active": false,
+    "level": 0,
+    "duration": {
+      "value": null,
+      "units": "",
+      "end": "",
+      "start": 62578861662
+    },
+    "conditions": [],
+    "hideFromToken": true,
+    "showInQuickbar": false
+  },
+  "img": "assets/22158656-1921313197-removebg-preview.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "JteyssDE45FXYRAt": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Item.DfbqmirSrdCdNh6A",
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.11",
+    "createdTime": 1775509834869,
+    "modifiedTime": 1775509834869,
+    "lastModifiedBy": "JteyssDE45FXYRAt"
+  },
+  "_id": "aj7KGm2mV4a8iE2j",
+  "_key": "!items!aj7KGm2mV4a8iE2j"
+}

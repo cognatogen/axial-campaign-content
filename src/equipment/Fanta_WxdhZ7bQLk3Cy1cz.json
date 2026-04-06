@@ -1,0 +1,93 @@
+{
+  "folder": "WAT4UNUs4ISR9YuS",
+  "type": "buff",
+  "name": "Fanta",
+  "system": {
+    "description": {
+      "value": "<p>+1 alchemical bonus to Charisma-based skill &amp; ability checks.</p>",
+      "instructions": ""
+    },
+    "tags": [],
+    "changes": [
+      {
+        "type": "alchemical",
+        "_id": "e5jpjTRQ",
+        "operator": "add",
+        "priority": 0,
+        "formula": "1",
+        "target": "chaSkills"
+      },
+      {
+        "type": "alchemical",
+        "_id": "SsgvSd55",
+        "operator": "add",
+        "priority": 0,
+        "formula": "1",
+        "target": "chaChecks"
+      }
+    ],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [],
+    "actions": [],
+    "attackNotes": [],
+    "effectNotes": [],
+    "uses": {
+      "value": null,
+      "per": "",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "links": {
+      "children": []
+    },
+    "tag": "",
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "subType": "item",
+    "active": false,
+    "level": 0,
+    "duration": {
+      "value": null,
+      "units": "",
+      "end": ""
+    },
+    "conditions": [],
+    "hideFromToken": false,
+    "showInQuickbar": false
+  },
+  "img": "assets/can-of-classic-fanta-drink-with-orange-flavor-on-transparent-background-free-png-976613483.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "JteyssDE45FXYRAt": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Item.vAwlnyy4T1Adrbvq",
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.11",
+    "createdTime": 1775509834869,
+    "modifiedTime": 1775509834869,
+    "lastModifiedBy": "JteyssDE45FXYRAt"
+  },
+  "_id": "WxdhZ7bQLk3Cy1cz",
+  "_key": "!items!WxdhZ7bQLk3Cy1cz"
+}

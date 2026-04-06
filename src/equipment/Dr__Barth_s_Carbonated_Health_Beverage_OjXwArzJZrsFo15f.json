@@ -1,0 +1,85 @@
+{
+  "folder": "WAT4UNUs4ISR9YuS",
+  "type": "buff",
+  "name": "Dr. Barth's Carbonated Health Beverage",
+  "system": {
+    "description": {
+      "value": "<p>+1 alchemical bonus to all saving throws.</p>",
+      "instructions": ""
+    },
+    "tags": [],
+    "changes": [
+      {
+        "type": "alchemical",
+        "_id": "I3qbJWLa",
+        "operator": "add",
+        "priority": 0,
+        "formula": "1",
+        "target": "allSavingThrows"
+      }
+    ],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [],
+    "actions": [],
+    "attackNotes": [],
+    "effectNotes": [],
+    "uses": {
+      "value": null,
+      "per": "",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "links": {
+      "children": []
+    },
+    "tag": "",
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "subType": "item",
+    "active": false,
+    "level": 0,
+    "duration": {
+      "value": null,
+      "units": "",
+      "end": ""
+    },
+    "conditions": [],
+    "hideFromToken": false,
+    "showInQuickbar": false
+  },
+  "_id": "OjXwArzJZrsFo15f",
+  "img": "assets/DrBarths.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "JteyssDE45FXYRAt": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.11",
+    "createdTime": 1775509834869,
+    "modifiedTime": 1775509834869,
+    "lastModifiedBy": "JteyssDE45FXYRAt"
+  },
+  "_key": "!items!OjXwArzJZrsFo15f"
+}

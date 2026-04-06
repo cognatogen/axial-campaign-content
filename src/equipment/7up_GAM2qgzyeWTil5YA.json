@@ -1,0 +1,93 @@
+{
+  "folder": "WAT4UNUs4ISR9YuS",
+  "type": "buff",
+  "name": "7up",
+  "system": {
+    "description": {
+      "value": "<p>+1 alchemical bonus to Dexterity-based skill &amp; ability checks.</p>",
+      "instructions": ""
+    },
+    "tags": [],
+    "changes": [
+      {
+        "type": "alchemical",
+        "_id": "e5jpjTRQ",
+        "operator": "add",
+        "priority": 0,
+        "formula": "1",
+        "target": "dexSkills"
+      },
+      {
+        "type": "alchemical",
+        "_id": "SsgvSd55",
+        "operator": "add",
+        "priority": 0,
+        "formula": "1",
+        "target": "dexChecks"
+      }
+    ],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [],
+    "actions": [],
+    "attackNotes": [],
+    "effectNotes": [],
+    "uses": {
+      "value": null,
+      "per": "",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "links": {
+      "children": []
+    },
+    "tag": "",
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "subType": "item",
+    "active": false,
+    "level": 0,
+    "duration": {
+      "value": null,
+      "units": "",
+      "end": ""
+    },
+    "conditions": [],
+    "hideFromToken": false,
+    "showInQuickbar": false
+  },
+  "img": "assets/berlin-oct-07-can-with-7up-or-seven-up-classic-logotype-isolated-on-white-front-view-in-berlin-on-october-07-2023-in-germany-2T97428-1883820127-removebg-preview.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "JteyssDE45FXYRAt": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": "Item.WxdhZ7bQLk3Cy1cz",
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.11",
+    "createdTime": 1775509834869,
+    "modifiedTime": 1775509834869,
+    "lastModifiedBy": "JteyssDE45FXYRAt"
+  },
+  "_id": "GAM2qgzyeWTil5YA",
+  "_key": "!items!GAM2qgzyeWTil5YA"
+}
