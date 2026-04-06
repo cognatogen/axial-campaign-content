@@ -43,8 +43,6 @@ export function formatActor(actor, imageFilename = null) {
   const { flavorText, imageCaption } = parseBiography(s.details?.biography?.value);
 
   // ========== HEADER ==========
-  lines.push(`= ${actor.name} =`);
-
   // Portrait image (right-aligned thumbnail)
   if (imageFilename) {
     const caption = imageCaption || actor.name;
