@@ -51,15 +51,16 @@ export function formatActor(actor, imageFilename = null) {
     lines.push(`[[File:${imageFilename}|thumb|right|300px|${caption}]]`);
   }
 
+  // Open stat block wrapper with d20pfsrd-style base font
+  lines.push(`<div style="font-family:sans-serif; font-size:14px;">`);
+
   // Flavor text from biography (italicized, below header)
   if (flavorText) {
-    lines.push("");
-    lines.push(`''${flavorText}''`);
+    lines.push(`<p style="font-style:italic;">${flavorText}</p>`);
   }
 
-  // Header block: name/CR in styled box, XP, type, init/senses
-  lines.push("");
-  lines.push(`<div style="font-size:1.4em; font-weight:bold; background:#4e5d4e; color:white; padding:4px 8px; margin:8px 0;">${actor.name} &emsp; CR ${cr}</div>`);
+  // Name/CR header — d20pfsrd p.title style
+  lines.push(`<p style="font-size:18px; font-weight:bold; background:rgb(207,226,243); padding:3px; clear:both;">${actor.name} (CR ${cr})</p>`);
 
   const headerLines = [];
   if (xp) headerLines.push(`'''XP''' ${xp.toLocaleString()}`);
@@ -77,8 +78,7 @@ export function formatActor(actor, imageFilename = null) {
   lines.push(headerLines.join("<br/>\n"));
 
   // ========== DEFENSE ==========
-  lines.push("");
-  lines.push(`== Defense ==`);
+  lines.push(sectionDivider("DEFENSE"));
 
   const defenseLines = [];
 
@@ -129,8 +129,7 @@ export function formatActor(actor, imageFilename = null) {
   lines.push(defenseLines.join("<br/>\n"));
 
   // ========== OFFENSE ==========
-  lines.push("");
-  lines.push(`== Offense ==`);
+  lines.push(sectionDivider("OFFENSE"));
 
   const offenseLines = [];
 
@@ -174,8 +173,7 @@ export function formatActor(actor, imageFilename = null) {
   lines.push(offenseLines.join("<br/>\n"));
 
   // ========== STATISTICS ==========
-  lines.push("");
-  lines.push(`== Statistics ==`);
+  lines.push(sectionDivider("STATISTICS"));
 
   const statLines = [];
 
@@ -230,17 +228,9 @@ export function formatActor(actor, imageFilename = null) {
 
   lines.push(statLines.join("<br/>\n"));
 
-  // ========== ECOLOGY ==========
-  const ecologySection = formatEcology(actor);
-  if (ecologySection) {
-    lines.push("");
-    lines.push(`== Ecology ==`);
-    lines.push(ecologySection);
-  }
-
   // ========== SPECIAL ABILITIES ==========
   // Only include features (traits, racial traits, templates, class features) — not actual feats
-  // Exclude ecology entries (handled above)
+  // Exclude ecology entries (handled separately below)
   const FEATURE_SUBTYPES = ["trait", "racial", "template", "classFeat", "aura", "misc"];
   const specialAbilities = getItemsByType(actor, "feat").filter(f => {
     const sub = f.system?.subType || f.system?.featType || "";
@@ -250,8 +240,7 @@ export function formatActor(actor, imageFilename = null) {
     return true;
   });
   if (specialAbilities.length > 0) {
-    lines.push("");
-    lines.push(`== Special Abilities ==`);
+    lines.push(sectionDivider("SPECIAL ABILITIES"));
     for (const ability of specialAbilities) {
       const abilType = ABILITY_TYPE_MAP[ability.system?.abilityType] || "";
       const typeTag = abilType ? ` (${abilType})` : "";
@@ -260,6 +249,16 @@ export function formatActor(actor, imageFilename = null) {
       lines.push(`'''${ability.name}${typeTag}''' ${desc}`);
     }
   }
+
+  // ========== ECOLOGY (always last section) ==========
+  const ecologySection = formatEcology(actor);
+  if (ecologySection) {
+    lines.push(sectionDivider("ECOLOGY"));
+    lines.push(ecologySection);
+  }
+
+  // Close stat block wrapper
+  lines.push(`</div>`);
 
   // Categories
   lines.push("");
@@ -614,9 +613,9 @@ function formatEcology(actor) {
     const trimmed = line.trim();
     if (!trimmed) continue;
 
-    const envMatch = trimmed.match(/^'''?Environment'''?\s*(.+)$/i) || trimmed.match(/^Environment\s*(.+)$/i);
-    const orgMatch = trimmed.match(/^'''?Organization'''?\s*(.+)$/i) || trimmed.match(/^Organization\s*(.+)$/i);
-    const trsMatch = trimmed.match(/^'''?Treasure'''?\s*(.+)$/i) || trimmed.match(/^Treasure\s*(.+)$/i);
+    const envMatch = trimmed.match(/^'''?Environment'''?\s*:?\s*(.+)$/i) || trimmed.match(/^Environment\s*:?\s*(.+)$/i);
+    const orgMatch = trimmed.match(/^'''?Organization'''?\s*:?\s*(.+)$/i) || trimmed.match(/^Organization\s*:?\s*(.+)$/i);
+    const trsMatch = trimmed.match(/^'''?Treasure'''?\s*:?\s*(.+)$/i) || trimmed.match(/^Treasure\s*:?\s*(.+)$/i);
 
     if (envMatch) {
       ecoLines.push(`'''Environment''' ${envMatch[1].trim()}`);
@@ -639,9 +638,9 @@ function formatEcology(actor) {
 
     if (envIdx >= 0 || orgIdx >= 0 || trsIdx >= 0) {
       // Has ecology keywords but not on separate lines — extract them
-      const envPat = rawText.match(/Environment\s+([^;.\n]+)/i);
-      const orgPat = rawText.match(/Organization\s+([^;.\n]+)/i);
-      const trsPat = rawText.match(/Treasure\s+([^;.\n]+)/i);
+      const envPat = rawText.match(/Environment\s*:?\s*([^;.\n]+)/i);
+      const orgPat = rawText.match(/Organization\s*:?\s*([^;.\n]+)/i);
+      const trsPat = rawText.match(/Treasure\s*:?\s*([^;.\n]+)/i);
       if (envPat) ecoLines.push(`'''Environment''' ${envPat[1].trim()}`);
       if (orgPat) ecoLines.push(`'''Organization''' ${orgPat[1].trim()}`);
       if (trsPat) ecoLines.push(`'''Treasure''' ${trsPat[1].trim()}`);
@@ -656,6 +655,14 @@ function formatEcology(actor) {
     result += "\n\n" + extraLines.join("\n");
   }
   return result;
+}
+
+/**
+ * Generate a d20pfsrd-style section divider.
+ * Renders as uppercase text with thin top/bottom borders.
+ */
+function sectionDivider(label) {
+  return `\n<p style="font-size:10px; border-top:solid thin; border-bottom:solid thin; text-transform:uppercase; overflow:hidden;">${label}</p>`;
 }
 
 function ordinal(n) {

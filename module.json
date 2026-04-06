@@ -2,7 +2,7 @@
   "id": "axial-campaign-content",
   "title": "Axial Campaign Content for Pathfinder 1st Edition",
   "description": "Shared compendium module for the Axial campaign — equipment, bestiary, and more for PF1e.",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
