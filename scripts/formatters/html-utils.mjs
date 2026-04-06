@@ -4,8 +4,12 @@
  */
 export function htmlToWikitext(html) {
   if (!html) return "";
+  // Strip Foundry @UUID[...]{label} links, keeping just the label
+  let cleaned = html.replace(/@UUID\[[^\]]*\]\{([^}]*)\}/g, "$1");
+  // Also handle @Compendium[...]{label} links
+  cleaned = cleaned.replace(/@Compendium\[[^\]]*\]\{([^}]*)\}/g, "$1");
   const parser = new DOMParser();
-  const doc = parser.parseFromString(html, "text/html");
+  const doc = parser.parseFromString(cleaned, "text/html");
   return walkNode(doc.body).trim();
 }
 

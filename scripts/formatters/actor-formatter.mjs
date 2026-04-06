@@ -2,7 +2,10 @@ import { htmlToWikitext } from "./html-utils.mjs";
 
 const SIZE_MAP = {
   fine: "Fine", dim: "Diminutive", tiny: "Tiny", sm: "Small",
-  med: "Medium", lg: "Large", huge: "Huge", grg: "Gargantuan", col: "Colossal"
+  med: "Medium", lg: "Large", huge: "Huge", grg: "Gargantuan", col: "Colossal",
+  // PF1e live documents may use numeric size values
+  0: "Fine", 1: "Diminutive", 2: "Tiny", 3: "Small",
+  4: "Medium", 5: "Large", 6: "Huge", 7: "Gargantuan", 8: "Colossal"
 };
 
 const ALIGNMENT_MAP = {
@@ -54,9 +57,11 @@ export function formatActor(actor, imageFilename = null) {
     lines.push(`''${flavorText}''`);
   }
 
-  // Header block: name/CR, XP, type, init/senses — joined with <br/>
+  // Header block: name/CR in styled box, XP, type, init/senses
+  lines.push("");
+  lines.push(`<div style="font-size:1.4em; font-weight:bold; background:#4e5d4e; color:white; padding:4px 8px; margin:8px 0;">${actor.name} &emsp; CR ${cr}</div>`);
+
   const headerLines = [];
-  headerLines.push(`'''${actor.name} CR ${cr}'''`);
   if (xp) headerLines.push(`'''XP''' ${xp.toLocaleString()}`);
   headerLines.push([alignment, size, creatureType].filter(Boolean).join(" "));
 
@@ -225,12 +230,24 @@ export function formatActor(actor, imageFilename = null) {
 
   lines.push(statLines.join("<br/>\n"));
 
+  // ========== ECOLOGY ==========
+  const ecologySection = formatEcology(actor);
+  if (ecologySection) {
+    lines.push("");
+    lines.push(`== Ecology ==`);
+    lines.push(ecologySection);
+  }
+
   // ========== SPECIAL ABILITIES ==========
   // Only include features (traits, racial traits, templates, class features) — not actual feats
+  // Exclude ecology entries (handled above)
   const FEATURE_SUBTYPES = ["trait", "racial", "template", "classFeat", "aura", "misc"];
   const specialAbilities = getItemsByType(actor, "feat").filter(f => {
     const sub = f.system?.subType || f.system?.featType || "";
-    return FEATURE_SUBTYPES.includes(sub) && f.system?.description?.value;
+    if (!FEATURE_SUBTYPES.includes(sub)) return false;
+    if (!f.system?.description?.value) return false;
+    if (isEcologyFeat(f)) return false;
+    return true;
   });
   if (specialAbilities.length > 0) {
     lines.push("");
@@ -565,6 +582,80 @@ function parseBiography(bioHtml) {
     flavorText: flavorLines.join(" "),
     imageCaption
   };
+}
+
+/**
+ * Check if a feat/feature is an ecology entry.
+ */
+function isEcologyFeat(item) {
+  const name = (item.name || "").toLowerCase();
+  return name.includes("ecology");
+}
+
+/**
+ * Build the Ecology section from a feat/feature named "Ecology" on the actor.
+ * Parses the description for Environment, Organization, Treasure lines,
+ * and any additional descriptive text.
+ */
+function formatEcology(actor) {
+  const allItems = actor.items?.contents || actor.items || [];
+  const ecoFeat = allItems.find(i =>
+    i.type === "feat" && (i.name || "").toLowerCase().includes("ecology")
+  );
+  if (!ecoFeat || !ecoFeat.system?.description?.value) return "";
+
+  const desc = htmlToWikitext(ecoFeat.system.description.value).trim();
+  if (!desc) return "";
+
+  const ecoLines = [];
+  const extraLines = [];
+
+  for (const line of desc.split(/\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+
+    const envMatch = trimmed.match(/^'''?Environment'''?\s*(.+)$/i) || trimmed.match(/^Environment\s*(.+)$/i);
+    const orgMatch = trimmed.match(/^'''?Organization'''?\s*(.+)$/i) || trimmed.match(/^Organization\s*(.+)$/i);
+    const trsMatch = trimmed.match(/^'''?Treasure'''?\s*(.+)$/i) || trimmed.match(/^Treasure\s*(.+)$/i);
+
+    if (envMatch) {
+      ecoLines.push(`'''Environment''' ${envMatch[1].trim()}`);
+    } else if (orgMatch) {
+      ecoLines.push(`'''Organization''' ${orgMatch[1].trim()}`);
+    } else if (trsMatch) {
+      ecoLines.push(`'''Treasure''' ${trsMatch[1].trim()}`);
+    } else {
+      extraLines.push(trimmed);
+    }
+  }
+
+  // If no structured lines found, treat the whole description as free-form ecology text
+  if (ecoLines.length === 0) {
+    // Try to use the raw text, splitting on common labels
+    const rawText = desc;
+    const envIdx = rawText.search(/environment/i);
+    const orgIdx = rawText.search(/organization/i);
+    const trsIdx = rawText.search(/treasure/i);
+
+    if (envIdx >= 0 || orgIdx >= 0 || trsIdx >= 0) {
+      // Has ecology keywords but not on separate lines — extract them
+      const envPat = rawText.match(/Environment\s+([^;.\n]+)/i);
+      const orgPat = rawText.match(/Organization\s+([^;.\n]+)/i);
+      const trsPat = rawText.match(/Treasure\s+([^;.\n]+)/i);
+      if (envPat) ecoLines.push(`'''Environment''' ${envPat[1].trim()}`);
+      if (orgPat) ecoLines.push(`'''Organization''' ${orgPat[1].trim()}`);
+      if (trsPat) ecoLines.push(`'''Treasure''' ${trsPat[1].trim()}`);
+    } else {
+      // No ecology keywords at all — just output the text
+      return desc;
+    }
+  }
+
+  let result = ecoLines.join("<br/>\n");
+  if (extraLines.length > 0) {
+    result += "\n\n" + extraLines.join("\n");
+  }
+  return result;
 }
 
 function ordinal(n) {
