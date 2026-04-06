@@ -51,16 +51,16 @@ export function formatActor(actor, imageFilename = null) {
     lines.push(`[[File:${imageFilename}|thumb|right|300px|${caption}]]`);
   }
 
-  // Open stat block wrapper with d20pfsrd-style base font
-  lines.push(`<div style="font-family:sans-serif; font-size:14px;">`);
+  // Open stat block wrapper
+  lines.push(`<div class="pointed-statblock" style="font-family:sans-serif; font-size:14px;">`);
 
   // Flavor text from biography (italicized, below header)
   if (flavorText) {
-    lines.push(`<p style="font-style:italic;">${flavorText}</p>`);
+    lines.push(`<p class="pointed-statblock-description" style="font-style:italic;">${flavorText}</p>`);
   }
 
-  // Name/CR header — d20pfsrd p.title style
-  lines.push(`<p style="font-size:18px; font-weight:bold; background:rgb(207,226,243); padding:3px; clear:both;">${actor.name} (CR ${cr})</p>`);
+  // Name/CR header — dark blue with white text
+  lines.push(`<p class="pointed-statblock-title" style="font-size:18px; font-weight:bold; background:#1a3c5e; color:white; padding:4px 8px; clear:both;">${actor.name} (CR ${cr})</p>`);
 
   const headerLines = [];
   if (xp) headerLines.push(`'''XP''' ${xp.toLocaleString()}`);
@@ -662,7 +662,7 @@ function formatEcology(actor) {
  * Renders as uppercase text with thin top/bottom borders.
  */
 function sectionDivider(label) {
-  return `\n<p style="font-size:10px; border-top:solid thin; border-bottom:solid thin; text-transform:uppercase; overflow:hidden;">${label}</p>`;
+  return `\n<p class="pointed-statblock-divider" style="font-size:10px; border-top:solid thin; border-bottom:solid thin; text-transform:uppercase; overflow:hidden;">${label}</p>`;
 }
 
 function ordinal(n) {
