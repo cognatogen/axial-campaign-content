@@ -34,12 +34,22 @@ export function formatActor(actor, imageFilename = null) {
   const size = SIZE_MAP[s.traits?.size] || s.traits?.size || "";
   const creatureType = getCreatureType(actor);
 
+  // ========== PARSE BIOGRAPHY ==========
+  const { flavorText, imageCaption } = parseBiography(s.details?.biography?.value);
+
   // ========== HEADER ==========
   lines.push(`= ${actor.name} =`);
 
   // Portrait image (right-aligned thumbnail)
   if (imageFilename) {
-    lines.push(`[[File:${imageFilename}|thumb|right|300px|${actor.name}]]`);
+    const caption = imageCaption || actor.name;
+    lines.push(`[[File:${imageFilename}|thumb|right|300px|${caption}]]`);
+  }
+
+  // Flavor text from biography (italicized, below header)
+  if (flavorText) {
+    lines.push("");
+    lines.push(`''${flavorText}''`);
   }
 
   // Header block: name/CR, XP, type, init/senses — joined with <br/>
@@ -237,17 +247,6 @@ export function formatActor(actor, imageFilename = null) {
       const desc = htmlToWikitext(ability.system.description.value).trim();
       lines.push("");
       lines.push(`'''${ability.name}${typeTag}''' ${desc}`);
-    }
-  }
-
-  // ========== DESCRIPTION ==========
-  const bio = s.details?.biography?.value;
-  if (bio) {
-    const bioText = htmlToWikitext(bio).trim();
-    if (bioText) {
-      lines.push("");
-      lines.push(`== Description ==`);
-      lines.push(bioText);
     }
   }
 
@@ -462,6 +461,38 @@ function computeXP(cr) {
     21: 409600, 22: 614400, 23: 819200, 24: 1228800, 25: 1638400
   };
   return xpTable[cr] || null;
+}
+
+/**
+ * Parse biography HTML into flavor text and an optional image caption.
+ * Any line starting with "Image:" is extracted as the portrait caption.
+ * All remaining text becomes italicized flavor at the top of the page.
+ */
+function parseBiography(bioHtml) {
+  if (!bioHtml) return { flavorText: "", imageCaption: "" };
+
+  const bioText = htmlToWikitext(bioHtml).trim();
+  if (!bioText) return { flavorText: "", imageCaption: "" };
+
+  const lines = bioText.split(/\n/);
+  let imageCaption = "";
+  const flavorLines = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    // Match lines starting with "Image:" (case-insensitive)
+    const imageMatch = trimmed.match(/^Image:\s*(.+)$/i);
+    if (imageMatch) {
+      imageCaption = imageMatch[1].trim();
+    } else if (trimmed) {
+      flavorLines.push(trimmed);
+    }
+  }
+
+  return {
+    flavorText: flavorLines.join(" "),
+    imageCaption
+  };
 }
 
 function ordinal(n) {
