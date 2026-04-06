@@ -265,12 +265,9 @@ export function formatActor(actor, imageFilename = null) {
   lines.push(`[[Category:Creatures]]`);
   lines.push(`[[Category:CR ${cr}]]`);
 
-  // Replace '''bold''' wikitext with inline-styled <b> tags for font-weight:700
-  const wikitext = lines.join("\n").replace(/'''([^']+)'''/g, '<b style="font-weight:700">$1</b>');
-
   return {
     title: actor.name,
-    wikitext
+    wikitext: lines.join("\n")
   };
 }
 
