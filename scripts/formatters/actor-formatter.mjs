@@ -31,7 +31,9 @@ export function formatActor(actor, imageFilename = null) {
   const cr = s.details?.cr?.base ?? "?";
   const xp = computeXP(cr);
   const alignment = ALIGNMENT_MAP[s.details?.alignment] || s.details?.alignment || "";
-  const size = SIZE_MAP[s.traits?.size] || s.traits?.size || "";
+  const rawSize = s.traits?.size;
+  const sizeKey = typeof rawSize === "object" ? (rawSize?.value || rawSize?.base || "") : (rawSize || "");
+  const size = SIZE_MAP[sizeKey] || sizeKey || "";
   const creatureType = getCreatureType(actor);
 
   // ========== PARSE BIOGRAPHY ==========
@@ -56,7 +58,7 @@ export function formatActor(actor, imageFilename = null) {
   const headerLines = [];
   headerLines.push(`'''${actor.name} CR ${cr}'''`);
   if (xp) headerLines.push(`'''XP''' ${xp.toLocaleString()}`);
-  headerLines.push(`${alignment} ${size} ${creatureType}`.trim());
+  headerLines.push([alignment, size, creatureType].filter(Boolean).join(" "));
 
   const initParts = [];
   const initTotal = actor.system.attributes?.init?.total;
@@ -140,14 +142,13 @@ export function formatActor(actor, imageFilename = null) {
     a.system?.subType === "ranged" || a.system?.attackType === "ranged"
   );
   if (meleeAttacks.length > 0) {
-    offenseLines.push(`'''Melee''' ${meleeAttacks.map(a => formatAttack(a)).join(", ")}`);
+    offenseLines.push(`'''Melee''' ${meleeAttacks.map(a => formatAttack(a, actor)).join(", ")}`);
   }
   if (rangedAttacks.length > 0) {
-    offenseLines.push(`'''Ranged''' ${rangedAttacks.map(a => formatAttack(a)).join(", ")}`);
+    offenseLines.push(`'''Ranged''' ${rangedAttacks.map(a => formatAttack(a, actor)).join(", ")}`);
   }
 
   // Space/Reach
-  const sizeKey = s.traits?.size;
   if (sizeKey && !["med", "sm"].includes(sizeKey)) {
     const spaceReach = getSpaceReach(sizeKey);
     if (spaceReach) offenseLines.push(`'''Space''' ${spaceReach.space} ft.; '''Reach''' ${spaceReach.reach} ft.`);
@@ -224,20 +225,13 @@ export function formatActor(actor, imageFilename = null) {
 
   lines.push(statLines.join("<br/>\n"));
 
-  // ========== ECOLOGY ==========
-  lines.push("");
-  lines.push(`== Ecology ==`);
-
-  const ecoLines = [];
-  ecoLines.push(`'''Environment''' any`);
-  ecoLines.push(`'''Organization''' solitary or group`);
-  ecoLines.push(`'''Treasure''' standard`);
-  lines.push(ecoLines.join("<br/>\n"));
-
   // ========== SPECIAL ABILITIES ==========
-  const specialAbilities = getItemsByType(actor, "feat").filter(f =>
-    f.system?.description?.value
-  );
+  // Only include features (traits, racial traits, templates, class features) — not actual feats
+  const FEATURE_SUBTYPES = ["trait", "racial", "template", "classFeat", "aura", "misc"];
+  const specialAbilities = getItemsByType(actor, "feat").filter(f => {
+    const sub = f.system?.subType || f.system?.featType || "";
+    return FEATURE_SUBTYPES.includes(sub) && f.system?.description?.value;
+  });
   if (specialAbilities.length > 0) {
     lines.push("");
     lines.push(`== Special Abilities ==`);
@@ -332,22 +326,57 @@ function formatSenses(senses) {
   return parts.join(", ");
 }
 
-function formatAttack(attack) {
+function formatAttack(attack, actor) {
   const name = attack.name?.toLowerCase() || "attack";
   const actions = attack.system?.actions;
   if (actions && actions.length > 0) {
     const action = actions[0];
-    const atkBonus = action.attackBonus || "";
+
+    // Compute total attack bonus: BAB + ability mod + extra attackBonus formula
+    const atkTotal = computeAttackBonus(actor, action);
+
+    // Primary damage parts
     const dmgParts = action.damage?.parts || [];
-    const dmgStr = dmgParts
+    const mainDmg = dmgParts
       .map(p => translateFormula(p.formula || p[0] || ""))
       .filter(Boolean)
       .join(" plus ");
-    if (atkBonus || dmgStr) {
-      return `${name} ${formatBonus(parseInt(atkBonus) || 0)}${dmgStr ? ` (${dmgStr})` : ""}`;
+
+    // Non-multiplying bonus damage (e.g. energy damage that doesn't crit-multiply)
+    const nonCritParts = action.damage?.nonCritParts || [];
+    const nonCritDmg = nonCritParts
+      .map(p => {
+        const formula = translateFormula(p.formula || p[0] || "");
+        if (!formula) return "";
+        const types = p.types || p.type || [];
+        const typeArr = Array.isArray(types) ? types : [types];
+        const typeLabel = typeArr.filter(Boolean).join(", ");
+        return typeLabel ? `${formula} (${typeLabel})` : formula;
+      })
+      .filter(Boolean);
+
+    // Combine all damage
+    const allDmg = [mainDmg, ...nonCritDmg].filter(Boolean).join(" + ");
+
+    if (atkTotal !== null || allDmg) {
+      const atkStr = atkTotal !== null ? ` ${formatBonus(atkTotal)}` : "";
+      return `${name}${atkStr}${allDmg ? ` (${allDmg})` : ""}`;
     }
   }
   return name;
+}
+
+/**
+ * Compute the total attack bonus for an action.
+ * Uses the actor's BAB + the relevant ability modifier + any extra attackBonus.
+ */
+function computeAttackBonus(actor, action) {
+  if (!actor) return null;
+  const bab = actor.system?.attributes?.bab?.total ?? 0;
+  const abilKey = action?.ability?.attack || "str";
+  const abilMod = actor.system?.abilities?.[abilKey]?.mod ?? 0;
+  const extraBonus = parseInt(action?.attackBonus) || 0;
+  return bab + abilMod + extraBonus;
 }
 
 /**
