@@ -1,0 +1,18 @@
+{
+  "AXIAL_WIKI.Settings.WikiUrl.Name": "Wiki URL",
+  "AXIAL_WIKI.Settings.WikiUrl.Hint": "Base URL of your Miraheze wiki (e.g. https://axialagescampaign.miraheze.org)",
+  "AXIAL_WIKI.Settings.BotUsername.Name": "Bot Username",
+  "AXIAL_WIKI.Settings.BotUsername.Hint": "Bot username from Special:BotPasswords on your wiki",
+  "AXIAL_WIKI.Settings.BotPassword.Name": "Bot Password",
+  "AXIAL_WIKI.Settings.BotPassword.Hint": "Bot password from Special:BotPasswords on your wiki",
+  "AXIAL_WIKI.Button.Export": "Wiki Export",
+  "AXIAL_WIKI.Dialog.Title": "Export to Wiki",
+  "AXIAL_WIKI.Dialog.PageTitle": "Page Title",
+  "AXIAL_WIKI.Dialog.Preview": "Wikitext Preview",
+  "AXIAL_WIKI.Dialog.Export": "Export",
+  "AXIAL_WIKI.Dialog.Cancel": "Cancel",
+  "AXIAL_WIKI.Notify.Success": "Successfully exported \"{name}\" to the wiki!",
+  "AXIAL_WIKI.Notify.Error": "Wiki export failed: {error}",
+  "AXIAL_WIKI.Notify.MissingSettings": "Please configure wiki URL, bot username, and bot password in Module Settings.",
+  "AXIAL_WIKI.Notify.Exporting": "Exporting to wiki..."
+}

@@ -1,0 +1,22 @@
+.axial-wiki-export-dialog .form-group {
+  margin-bottom: 8px;
+}
+
+.axial-wiki-export-dialog label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.axial-wiki-export-dialog input[type="text"] {
+  width: 100%;
+}
+
+.axial-wiki-export-dialog textarea {
+  width: 100%;
+  height: 400px;
+  font-family: monospace;
+  font-size: 12px;
+  white-space: pre;
+  tab-size: 2;
+}
