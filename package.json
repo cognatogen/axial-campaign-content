@@ -1,0 +1,17 @@
+{
+  "name": "axial-campaign-content",
+  "version": "1.0.0",
+  "description": "Shared compendium module for the Axial campaign (PF1e)",
+  "private": true,
+  "scripts": {
+    "unpack:equipment": "fvtt package unpack equipment --type Module --id axial-campaign-content --out src/equipment",
+    "unpack:bestiary": "fvtt package unpack bestiary --type Module --id axial-campaign-content --out src/bestiary",
+    "unpack": "npm run unpack:equipment && npm run unpack:bestiary",
+    "pack:equipment": "fvtt package pack src/equipment --type Module --id axial-campaign-content --out packs/equipment",
+    "pack:bestiary": "fvtt package pack src/bestiary --type Module --id axial-campaign-content --out packs/bestiary",
+    "pack": "npm run pack:equipment && npm run pack:bestiary"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "axial-campaign-content",
+  "title": "Axial Campaign Content for Pathfinder 1st Edition",
+  "description": "Shared compendium module for the Axial campaign — equipment, bestiary, and more for PF1e.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "cognatogen"
+    }
+  ],
+  "packs": [
+    {
+      "name": "equipment",
+      "label": "Axial Equipment",
+      "path": "packs/equipment",
+      "type": "Item",
+      "system": "pf1"
+    },
+    {
+      "name": "bestiary",
+      "label": "Axial Bestiary",
+      "path": "packs/bestiary",
+      "type": "Actor",
+      "system": "pf1"
+    }
+  ]
+}
