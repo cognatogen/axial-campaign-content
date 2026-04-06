@@ -52,7 +52,8 @@ export function formatActor(actor, imageFilename = null) {
   }
 
   // Open stat block wrapper
-  lines.push(`<div class="pointed-statblock" style="font-family:sans-serif; font-size:14pt;">`);
+  lines.push(`<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">`);
+  lines.push(`<div class="pointed-statblock" style="font-family:'Roboto',sans-serif; font-size:14pt;">`);
 
   // Flavor text from biography (italicized, below header)
   if (flavorText) {
