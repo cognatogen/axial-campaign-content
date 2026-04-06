@@ -7,13 +7,13 @@
     "unpack:equipment": "fvtt package unpack equipment --type Module --id axial-campaign-content --out src/equipment",
     "unpack:bestiary": "fvtt package unpack bestiary --type Module --id axial-campaign-content --out src/bestiary",
     "unpack:spells": "fvtt package unpack spells --type Module --id axial-campaign-content --out src/spells",
-    "unpack": "npm run unpack:equipment && npm run unpack:bestiary && npm run unpack:spells",
+    "unpack": "npm run unpack:equipment & npm run unpack:bestiary & npm run unpack:spells",
     "pack:equipment": "fvtt package pack src/equipment --type Module --id axial-campaign-content --out packs/equipment",
     "pack:bestiary": "fvtt package pack src/bestiary --type Module --id axial-campaign-content --out packs/bestiary",
     "pack:spells": "fvtt package pack src/spells --type Module --id axial-campaign-content --out packs/spells",
-    "pack": "npm run pack:equipment && npm run pack:bestiary && npm run pack:spells"
+    "pack": "npm run pack:equipment & npm run pack:bestiary & npm run pack:spells"
   },
   "devDependencies": {
-    "@foundryvtt/foundryvtt-cli": "^1.0.0"
+    "@foundryvtt/foundryvtt-cli": "^3.0.3"
   }
 }

@@ -1,0 +1,87 @@
+{
+  "type": "spell",
+  "name": "Placeholder",
+  "system": {
+    "description": {
+      "value": "",
+      "instructions": ""
+    },
+    "tags": [],
+    "actions": [],
+    "attackNotes": [],
+    "effectNotes": [],
+    "links": {
+      "children": []
+    },
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "learnedAt": {
+      "class": {},
+      "domain": {},
+      "subDomain": {},
+      "elementalSchool": {},
+      "bloodline": {}
+    },
+    "level": 1,
+    "clOffset": 0,
+    "slOffset": 0,
+    "school": "abj",
+    "subschool": [],
+    "descriptors": [],
+    "components": {
+      "value": "",
+      "verbal": false,
+      "somatic": false,
+      "thought": false,
+      "emotion": false,
+      "material": false,
+      "focus": false,
+      "divineFocus": 0
+    },
+    "materials": {
+      "value": "",
+      "focus": "",
+      "gpValue": 0
+    },
+    "spellbook": "",
+    "preparation": {
+      "value": 0,
+      "max": 0
+    },
+    "uses": {
+      "autoDeductChargesCost": ""
+    },
+    "atWill": false,
+    "sr": true,
+    "showInQuickbar": false,
+    "domain": false,
+    "slotCost": 1,
+    "showInCombat": false,
+    "clCheck": false
+  },
+  "_id": "FjjXd99yPpaziWK1",
+  "img": "icons/svg/daze.svg",
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "JteyssDE45FXYRAt": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.11",
+    "createdTime": 1775444063642,
+    "modifiedTime": 1775444065529,
+    "lastModifiedBy": "JteyssDE45FXYRAt"
+  },
+  "_key": "!items!FjjXd99yPpaziWK1"
+}
