@@ -1,5 +1,8 @@
 import { WikiAPI } from "./wiki-api.mjs";
 import { formatActor } from "./formatters/actor-formatter.mjs";
+import { formatItem } from "./formatters/item-formatter.mjs";
+import { formatSpell } from "./formatters/spell-formatter.mjs";
+import { formatFeat } from "./formatters/feat-formatter.mjs";
 import { showExportDialog } from "./ui/export-dialog.mjs";
 
 const MODULE_ID = "axial-campaign-content";
@@ -52,12 +55,11 @@ Hooks.on("getItemSheetHeaderButtons", (sheet, buttons) => {
 });
 
 /**
- * Fetch the actor/item's avatar image as a Blob for wiki upload.
+ * Fetch the document's image as a Blob for wiki upload.
  */
 async function fetchImageBlob(imgPath) {
   if (!imgPath) return null;
   try {
-    // Strip query params (cache busters like ?1772778705102)
     const cleanPath = imgPath.split("?")[0];
     const resp = await fetch(cleanPath);
     if (!resp.ok) return null;
@@ -69,7 +71,7 @@ async function fetchImageBlob(imgPath) {
 }
 
 /**
- * Derive a wiki-friendly filename from the actor name and image path.
+ * Derive a wiki-friendly filename from the document name and image path.
  */
 function getWikiImageFilename(name, imgPath) {
   if (!imgPath) return null;
@@ -77,6 +79,39 @@ function getWikiImageFilename(name, imgPath) {
   const ext = cleanPath.split(".").pop() || "webp";
   const safeName = name.replace(/[^a-zA-Z0-9_ -]/g, "").replace(/\s+/g, "_");
   return `${safeName}.${ext}`;
+}
+
+/**
+ * Route document to the appropriate formatter based on its type.
+ */
+function formatDocument(document, imageFilename) {
+  // Actors
+  if (document.documentName === "Actor" || document.constructor?.documentName === "Actor") {
+    if (document.type === "npc" || document.type === "character") {
+      return formatActor(document, imageFilename);
+    }
+  }
+
+  // Items
+  if (document.documentName === "Item" || document.constructor?.documentName === "Item") {
+    switch (document.type) {
+      case "spell":
+        return formatSpell(document, imageFilename);
+      case "feat":
+        return formatFeat(document, imageFilename);
+      case "weapon":
+      case "equipment":
+      case "consumable":
+      case "loot":
+      case "container":
+        return formatItem(document, imageFilename);
+      default:
+        // Fallback: try item formatter for unknown item types
+        return formatItem(document, imageFilename);
+    }
+  }
+
+  return null;
 }
 
 async function exportToWiki(document) {
@@ -89,13 +124,10 @@ async function exportToWiki(document) {
     return;
   }
 
-  // Determine image filename for wikitext reference
   const imageFilename = getWikiImageFilename(document.name, document.img);
+  const formatted = formatDocument(document, imageFilename);
 
-  let formatted;
-  if (document.type === "npc") {
-    formatted = formatActor(document, imageFilename);
-  } else {
+  if (!formatted) {
     ui.notifications.warn(`Wiki export for type "${document.type}" is not yet supported.`);
     return;
   }
@@ -106,9 +138,7 @@ async function exportToWiki(document) {
   ui.notifications.info(game.i18n.localize("AXIAL_WIKI.Notify.Exporting"));
 
   try {
-    // Fetch image blob for upload
     const imageBlob = await fetchImageBlob(document.img);
-
     const api = new WikiAPI(wikiUrl, botUsername, botPassword);
     await api.createOrUpdatePage(
       result.title,
