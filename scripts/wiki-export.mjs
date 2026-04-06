@@ -3,6 +3,8 @@ import { formatActor } from "./formatters/actor-formatter.mjs";
 import { formatItem } from "./formatters/item-formatter.mjs";
 import { formatSpell } from "./formatters/spell-formatter.mjs";
 import { formatFeat } from "./formatters/feat-formatter.mjs";
+import { formatRace } from "./formatters/race-formatter.mjs";
+import { formatClass } from "./formatters/class-formatter.mjs";
 import { showExportDialog } from "./ui/export-dialog.mjs";
 
 const MODULE_ID = "axial-campaign-content";
@@ -99,6 +101,10 @@ function formatDocument(document, imageFilename) {
         return formatSpell(document, imageFilename);
       case "feat":
         return formatFeat(document, imageFilename);
+      case "race":
+        return formatRace(document, imageFilename);
+      case "class":
+        return formatClass(document, imageFilename);
       case "weapon":
       case "equipment":
       case "consumable":
