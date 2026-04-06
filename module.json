@@ -26,6 +26,13 @@
       "path": "packs/bestiary",
       "type": "Actor",
       "system": "pf1"
+    },
+    {
+      "name": "spells",
+      "label": "Axial Spells",
+      "path": "packs/spells",
+      "type": "Item",
+      "system": "pf1"
     }
   ]
 }
