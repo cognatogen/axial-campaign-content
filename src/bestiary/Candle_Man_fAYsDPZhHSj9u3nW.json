@@ -464,7 +464,7 @@
       "age": "",
       "alignment": "ne",
       "biography": {
-        "value": ""
+        "value": "<div class=\"statblockContainer\" style=\"margin-top:15px\"><p>A staggering corpse drenched in red wax stands still in the dark waiting for the lost and curious to approach.</p><p><em>\"Candle Man lights his candles, waiting for his cattle...\"</em></p></div>"
       },
       "bonusFeatFormula": "1",
       "bonusSkillRankFormula": "",
@@ -478,7 +478,7 @@
         }
       },
       "notes": {
-        "value": "<div style=\"margin-top:15px;margin-bottom:5px;text-align:center;font-size:1em;font-weight:900\"><p>sbc | Generated with version 5.9.1 on March 5, 2026</p></div><hr /><div class=\"statblockContainer\" style=\"margin-top:15px\"><p></p><div class=\"sbcStatBlock\"><hr class=\"sbcBorder\" /><div style=\"padding:5px\"><h1>Candle Man <ul class=\"sbcSlashList\">   </ul></h1>  <hr /><div class=\"sbcSection\" data-content=\"base\">  <strong>XP</strong> 400<br />     <br /> NE  Medium  Undead  <ul class=\"sbcCommaList sbcParensWrappedList\">    </ul><br /><ul class=\"sbcSemicolonList\"><li><strong>Init</strong>  +1</li>  <li><strong>Senses</strong><ul class=\"sbcCommaList\" data-content=\"senses\">  <li>Darkvision 60 ft</li>  </ul></li>   </ul><br />  </div><div class=\"sbcSection\" data-content=\"defense\"><h4>Defense</h4><hr /><ul class=\"sbcCommaList\"><li><strong>AC</strong> 12</li><li><strong>Touch</strong> 10</li><li><strong>Flat-footed</strong> 12</li></ul>  <ul class=\"sbcParensWrappedList sbcCommaList\" data-group=\"armor\">  <li>+2 Natural</li>  </ul>  <br /><ul class=\"sbcSemicolonList\"><li><strong>Hit Points</strong> 17 (2 HD; 2d8+7)</li>  </ul><br /><ul class=\"sbcSemicolonList\"><li><ul class=\"sbcCommaList\" data-content=\"saves\"><li><strong>Fort</strong> +2</li><li><strong>Ref</strong> +1</li><li><strong>Will</strong> +3</li></ul></li>   </ul><br /><ul class=\"sbcSemicolonList\">   <li><strong>DR</strong><ul class=\"sbcCommaList\" data-content=\"dr\">  <li>3/Magic</li>  </ul></li>   <li><strong>Immune</strong><ul class=\"sbcCommaList\" data-content=\"immune\">  <li>Fire</li>  <li>Undead traits</li>  </ul></li>     </ul>  </div><div><div class=\"sbcSection\" data-content=\"offense\"><h4>Offense</h4><hr /><strong>Speed</strong><ul class=\"sbcCommaList\" data-content=\"speed\">  <li>Land 30 ft</li>  </ul><br />  <strong>Melee</strong> slam +5 (1d6+4, 1d4 fire)<br />   <ul class=\"sbcSemicolonList\">   </ul>   <strong>Special Attacks</strong><ul class=\"sbcCommaList\" data-content=\"special-attacks\">  <li>Candle Fire (15ft, Cone, DC 12, 3d4 fire)</li>  </ul><br />  </div></div>  <div class=\"sbcSection\">  <div class=\"spellBook\"><strong>Spell-like abilities</strong><ul class=\"sbcParensWrappedList sbcSemicolonList\"><li>CL 2</li><li>Concentration +2</li>  </ul><ul class=\"sbcSpellList\">  <li>  At will  —<ul class=\"sbcCommaList sbcItalic\">  <li> Detect Magic <ul class=\"sbcParensWrappedList sbcCommaList\">   </ul></li>  <li> Pyrotechnics <ul class=\"sbcParensWrappedList sbcCommaList\">   <li>DC 13</li> </ul></li>  </ul></li>   </ul></div>  </div>    <div class=\"sbcSection\" data-content=\"statistics\"><h4>Statistics</h4><hr /><ul class=\"sbcCommaList\" data-content=\"attributes\"><li><strong>Str</strong> 18</li><li><strong>Dex</strong> 13</li><li><strong>Con</strong>  —</li><li><strong>Int</strong>  —</li><li><strong>Wis</strong> 10</li><li><strong>Cha</strong> 14</li></ul><br /><ul class=\"sbcSemicolonList\" data-content=\"base-attack\"><li><strong>Base Atk</strong>+1</li><li><strong>CMB</strong> +5</li><li><strong>CMD</strong> 16  </li></ul><br />  <strong>PF1.FeatPlural</strong><ul class=\"sbcCommaList\" data-content=\"feats\">  <li>Toughness</li>  </ul><br />   <strong>Skills</strong><ul class=\"sbcCommaList\" data-content=\"skills\">  <li>Stealth +2 (+22 while under dim light)</li>  </ul>  <br />    <strong>SQ</strong><ul class=\"sbcCommaList\" data-content=\"sq\">  <li>Candle Light</li>  <li>staggered</li>  </ul><br />   </div>  <div class=\"sbcSection\" data-content=\"ecology\"><h4>Ecology</h4><hr />  <strong>Environment</strong>  any<br />   <strong>Organization</strong>  any<br />   <strong>Treasure</strong>  Special: 60% 3 burning hand wands CL 1, (2d4-1 for each wands remaining charges) 30% 1 Burning hand CL 3 (2d4-1 for remaining charges) 10% an Eternal Wand of Burning Hands CL 3<br />  </div>    <div class=\"sbcSection\" data-content=\"special-abilities\"><h4> Special Abilities </h4><hr />  <p><strong>Staggered (Ex)</strong> A Candle man has poor reflexes and can only perform a single move action or standard action each round (it has the staggered condition.) A zombie can move up to its speed and attack in the same round as a charge action. </p>  <p><strong>Candle Light (Ex)</strong> A candle man gives of light as a candle (5ft Radius that illuminates the area by one light level up to normal light) while under dim light the Candle man gains a +20 stealth check to not reveal itself. </p>  <p><strong>Candle Fire (Su)</strong> As a standard action a Candle Man launches a wave of fire at its victims in a 15ft cone dealing 3d4 fire damage (reflex save DC12 for half) </p>  <p><strong>Flaming Rush (Su)</strong> When a Candle Man performs a staggered charge instead of making a slam attack they may use its candle fire ability. </p>  </div>    </div><hr class=\"sbcBorder\" /></div><p></p></div><br /><hr /><div class=\"rawInputContainer\" style=\"margin-top:15px\"><h2 style=\"text-align:middle;border:none;text-transform:uppercase;color:#000\">RAW INPUT</h2><hr /><pre style=\"white-space:pre-wrap;font-size:14px\">    Candle Man\nCandle Man CR 1\n\nXP 400\nNE Medium undead\nInit +1; Senses darkvision 60 ft.; Perception +0\nDefense\nAC 12, touch 10, flat-footed 12 (+2 natural)\nhp 16 (2d8+7)\nFort +2, Ref +1, Will +3\nDefensive Abilities DR 3/Magic; Immune fire, undead traits\nOffense\nSpeed 30 ft.\nMelee slam +5 (1d6+4, 1d4 fire)\nSpecial Attacks Candle Fire (15ft, Cone, DC 12, 3d4 fire)\nSpell-like abilities (cl 2th, concentration +2)\nAt will-detect magic, pyrotechnics (DC 13),\nStatistics\nStr 18, Dex 13, Con -, Int -, Wis 10, Cha 14\nBase Atk +1; CMB +5; CMD 16\nFeats Toughness\nSkills Stealth +2 (+22 while under dim light)\nSQ Candle Light, staggered \nEcology\nEnvironment any\nOrganization any\nTreasure Special: 60% 3 burning hand wands CL 1, (2d4-1 for each wands remaining charges) 30% 1 Burning hand CL 3 (2d4-1 for remaining charges) 10% an Eternal Wand of Burning Hands CL 3\nSpecial abilities \nStaggered (Ex) A Candle man has poor reflexes and can only perform a single move action or standard action each round (it has the staggered condition.) A zombie can move up to its speed and attack in the same round as a charge action.\nCandle Light (Ex) A candle man gives of light as a candle (5ft Radius that illuminates the area by one light level up to normal light) while under dim light the Candle man gains a +20 stealth check to not reveal itself.\nCandle Fire (Su) As a standard action a Candle Man launches a wave of fire at its victims in a 15ft cone dealing 3d4 fire damage (reflex save DC12 for half)\nFlaming Rush (Su) When a Candle Man performs a staggered charge instead of making a slam attack they may use its candle fire ability.\n    </pre></div>"
+        "value": "<div style=\"margin-top:15px;margin-bottom:5px;text-align:center;font-size:1em;font-weight:900\"><p><strong>sbc | Generated with version 5.9.1 on March 5, 2026</strong></p></div><hr /><div class=\"statblockContainer\" style=\"margin-top:15px\"><div class=\"sbcStatBlock\"><hr class=\"sbcBorder\" /><div style=\"padding:5px\"><h1>Candle Man</h1><hr /><div class=\"sbcSection\" data-content=\"base\"><p><strong>XP</strong> 400<br /><br />NE Medium Undead</p><ul class=\"sbcCommaList sbcParensWrappedList\"><li><p></p></li></ul><p><br /></p><ul class=\"sbcSemicolonList\"><li><strong>Init</strong> +1</li><li><p><strong>Senses</strong></p><ul class=\"sbcCommaList\" data-content=\"senses\"><li>Darkvision 60 ft</li></ul></li></ul><p><br /></p></div><div class=\"sbcSection\" data-content=\"defense\"><h4>Defense</h4><hr /><ul class=\"sbcCommaList\"><li><strong>AC</strong> 12</li><li><strong>Touch</strong> 10</li><li><strong>Flat-footed</strong> 12</li></ul><ul class=\"sbcParensWrappedList sbcCommaList\" data-group=\"armor\"><li>+2 Natural</li></ul><p><br /></p><ul class=\"sbcSemicolonList\"><li><strong>Hit Points</strong> 17 (2 HD; 2d8+7)</li></ul><p><br /></p><ul class=\"sbcSemicolonList\"><li><p><strong>Fort</strong> +2</p><ol><li><strong>Ref</strong> +1</li><li><strong>Will</strong> +3</li></ol></li></ul><p><br /></p><ul class=\"sbcSemicolonList\"><li><p><strong>DR</strong></p><ul class=\"sbcCommaList\" data-content=\"dr\"><li>3/Magic</li></ul></li><li><p><strong>Immune</strong></p><ul class=\"sbcCommaList\" data-content=\"immune\"><li>Fire</li><li>Undead traits</li></ul></li></ul></div><div><div class=\"sbcSection\" data-content=\"offense\"><h4>Offense</h4><hr /><p><strong>Speed</strong></p><ul class=\"sbcCommaList\" data-content=\"speed\"><li>Land 30 ft</li></ul><p><br /><strong>Melee</strong> slam +5 (1d6+4, 1d4 fire)<br /></p><ul class=\"sbcSemicolonList\"><li><p></p></li></ul><p><strong>Special Attacks</strong></p><ul class=\"sbcCommaList\" data-content=\"special-attacks\"><li>Candle Fire (15ft, Cone, DC 12, 3d4 fire)</li></ul><p><br /></p></div></div><div class=\"sbcSection\"><div class=\"spellBook\"><p><strong>Spell-like abilities</strong></p><ul class=\"sbcParensWrappedList sbcSemicolonList\"><li>CL 2</li><li>Concentration +2</li></ul><ul class=\"sbcSpellList\"><li><p>At will —</p><ul class=\"sbcCommaList sbcItalic\"><li><p>Detect Magic</p><ul class=\"sbcParensWrappedList sbcCommaList\"><li><p></p></li></ul></li><li><p>Pyrotechnics</p><ul class=\"sbcParensWrappedList sbcCommaList\"><li>DC 13</li></ul></li></ul></li></ul></div></div><div class=\"sbcSection\" data-content=\"statistics\"><h4>Statistics</h4><hr /><ul class=\"sbcCommaList\" data-content=\"attributes\"><li><strong>Str</strong> 18</li><li><strong>Dex</strong> 13</li><li><strong>Con</strong> —</li><li><strong>Int</strong> —</li><li><strong>Wis</strong> 10</li><li><strong>Cha</strong> 14</li></ul><p><br /></p><ul class=\"sbcSemicolonList\" data-content=\"base-attack\"><li><strong>Base Atk</strong>+1</li><li><strong>CMB</strong> +5</li><li><strong>CMD</strong> 16</li></ul><p><br /><strong>PF1.FeatPlural</strong></p><ul class=\"sbcCommaList\" data-content=\"feats\"><li>Toughness</li></ul><p><br /><strong>Skills</strong></p><ul class=\"sbcCommaList\" data-content=\"skills\"><li>Stealth +2 (+22 while under dim light)</li></ul><p><br /><strong>SQ</strong></p><ul class=\"sbcCommaList\" data-content=\"sq\"><li>Candle Light</li><li>staggered</li></ul><p><br /></p></div><div class=\"sbcSection\" data-content=\"ecology\"><h4>Ecology</h4><hr /><p><strong>Environment</strong> any<br /><strong>Organization</strong> any<br /><strong>Treasure</strong> Special: 60% 3 burning hand wands CL 1, (2d4-1 for each wands remaining charges) 30% 1 Burning hand CL 3 (2d4-1 for remaining charges) 10% an Eternal Wand of Burning Hands CL 3<br /></p></div><div class=\"sbcSection\" data-content=\"special-abilities\"><h4>Special Abilities</h4><hr /><p><strong>Staggered (Ex)</strong> A Candle man has poor reflexes and can only perform a single move action or standard action each round (it has the staggered condition.) A zombie can move up to its speed and attack in the same round as a charge action.</p><p><strong>Candle Light (Ex)</strong> A candle man gives of light as a candle (5ft Radius that illuminates the area by one light level up to normal light) while under dim light the Candle man gains a +20 stealth check to not reveal itself.</p><p><strong>Candle Fire (Su)</strong> As a standard action a Candle Man launches a wave of fire at its victims in a 15ft cone dealing 3d4 fire damage (reflex save DC12 for half)</p><p><strong>Flaming Rush (Su)</strong> When a Candle Man performs a staggered charge instead of making a slam attack they may use its candle fire ability.</p></div></div><hr class=\"sbcBorder\" /></div><p></p></div><p><br /></p><hr /><div class=\"rawInputContainer\" style=\"margin-top:15px\"><h2 style=\"text-align:middle;border:none;text-transform:uppercase;color:#000\">RAW INPUT</h2><hr /><pre style=\"white-space:pre-wrap;font-size:14px\"><code>    Candle Man\nCandle Man CR 1\n\nXP 400\nNE Medium undead\nInit +1; Senses darkvision 60 ft.; Perception +0\nDefense\nAC 12, touch 10, flat-footed 12 (+2 natural)\nhp 16 (2d8+7)\nFort +2, Ref +1, Will +3\nDefensive Abilities DR 3/Magic; Immune fire, undead traits\nOffense\nSpeed 30 ft.\nMelee slam +5 (1d6+4, 1d4 fire)\nSpecial Attacks Candle Fire (15ft, Cone, DC 12, 3d4 fire)\nSpell-like abilities (cl 2th, concentration +2)\nAt will-detect magic, pyrotechnics (DC 13),\nStatistics\nStr 18, Dex 13, Con -, Int -, Wis 10, Cha 14\nBase Atk +1; CMB +5; CMD 16\nFeats Toughness\nSkills Stealth +2 (+22 while under dim light)\nSQ Candle Light, staggered \nEcology\nEnvironment any\nOrganization any\nTreasure Special: 60% 3 burning hand wands CL 1, (2d4-1 for each wands remaining charges) 30% 1 Burning hand CL 3 (2d4-1 for remaining charges) 10% an Eternal Wand of Burning Hands CL 3\nSpecial abilities \nStaggered (Ex) A Candle man has poor reflexes and can only perform a single move action or standard action each round (it has the staggered condition.) A zombie can move up to its speed and attack in the same round as a charge action.\nCandle Light (Ex) A candle man gives of light as a candle (5ft Radius that illuminates the area by one light level up to normal light) while under dim light the Candle man gains a +20 stealth check to not reveal itself.\nCandle Fire (Su) As a standard action a Candle Man launches a wave of fire at its victims in a 15ft cone dealing 3d4 fire damage (reflex save DC12 for half)\nFlaming Rush (Su) When a Candle Man performs a staggered charge instead of making a slam attack they may use its candle fire ability.\n    </code></pre></div>"
       },
       "cr": {
         "base": 1
@@ -2311,19 +2311,21 @@
     },
     {
       "_stats": {
-        "compendiumSource": null,
+        "compendiumSource": "Compendium.pf1.feats.Item.8snLqsJN4LLL00Nq",
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "13.351",
         "systemId": "pf1",
         "systemVersion": "11.11",
-        "lastModifiedBy": null
+        "createdTime": 1775460431160,
+        "modifiedTime": 1775460431160,
+        "lastModifiedBy": "JteyssDE45FXYRAt"
       },
       "img": "systems/pf1/icons/feats/toughness.jpg",
-      "name": "Toughness (Wounds)",
+      "name": "Toughness",
       "system": {
         "description": {
-          "value": "<p><em>You have enhanced physical stamina.</em></p><p><strong>Benefits</strong>: You gain 1 wound point for every level or Hit Die your character has.</p>",
+          "value": "<i>You have enhanced physical stamina.</i><p><strong>Benefits</strong>: You gain +3 hit points. For every Hit Die you possess beyond 3, you gain an additional +1 hit point. If you have more than 3 Hit Dice, you gain +1 hit points whenever you gain a Hit Die (such as when you gain a level).</p>",
           "instructions": ""
         },
         "tags": [
@@ -2342,12 +2344,10 @@
         },
         "changes": [
           {
-            "_id": "tBegdRYw",
-            "formula": "@attributes.hd.total",
-            "target": "wounds",
-            "type": "untyped",
-            "operator": "add",
-            "priority": 0
+            "_id": "CpNhC0VQ",
+            "formula": "max(3, @attributes.hd.total)",
+            "target": "mhp",
+            "type": "untyped"
           }
         ],
         "changeFlags": {
@@ -2390,52 +2390,13 @@
         "simple": false,
         "summons": false,
         "disabled": false,
-        "classSkills": {
-          "acr": false,
-          "apr": false,
-          "art": false,
-          "blf": false,
-          "clm": false,
-          "crf": false,
-          "dip": false,
-          "dev": false,
-          "dis": false,
-          "esc": false,
-          "fly": false,
-          "han": false,
-          "hea": false,
-          "int": false,
-          "kar": false,
-          "kdu": false,
-          "ken": false,
-          "kge": false,
-          "khi": false,
-          "klo": false,
-          "kna": false,
-          "kno": false,
-          "kpl": false,
-          "kre": false,
-          "lin": false,
-          "lor": false,
-          "per": false,
-          "prf": false,
-          "pro": false,
-          "rid": false,
-          "sen": false,
-          "slt": false,
-          "spl": false,
-          "ste": false,
-          "sur": false,
-          "swm": false,
-          "umd": false
-        },
+        "classSkills": {},
         "sources": [
           {
             "id": "PZO1110",
             "pages": "116, 135"
           }
-        ],
-        "showInCombat": false
+        ]
       },
       "type": "feat",
       "effects": [],
@@ -2444,10 +2405,10 @@
         "default": 0,
         "JteyssDE45FXYRAt": 3
       },
-      "_id": "jTXmvIBxzaOHviBm",
+      "_id": "aNGjdtIlbIrd1W6C",
       "folder": null,
       "sort": 0,
-      "_key": "!actors.items!fAYsDPZhHSj9u3nW.jTXmvIBxzaOHviBm"
+      "_key": "!actors.items!fAYsDPZhHSj9u3nW.aNGjdtIlbIrd1W6C"
     }
   ],
   "effects": [],
@@ -2471,7 +2432,7 @@
     "systemId": "pf1",
     "systemVersion": "11.11",
     "createdTime": 1775443358320,
-    "modifiedTime": 1775443358320,
+    "modifiedTime": 1775460708399,
     "lastModifiedBy": "JteyssDE45FXYRAt"
   },
   "_id": "fAYsDPZhHSj9u3nW",
