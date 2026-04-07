@@ -50,7 +50,7 @@ export function formatActor(actor, imageFilename = null) {
   }
 
   // Open stat block wrapper
-  lines.push(`<div class="pointed-statblock" style="font-family:'Roboto'; font-size:14pt;">`);
+  lines.push(`<div class="pointed-statblock">`);
 
   // Flavor text from biography (italicized, below header)
   if (flavorText) {
