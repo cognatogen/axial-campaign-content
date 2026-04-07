@@ -1,0 +1,144 @@
+{
+  "type": "spell",
+  "system": {
+    "description": {
+      "value": "",
+      "instructions": ""
+    },
+    "tags": [],
+    "actions": [
+      {
+        "name": "Use",
+        "activation": {
+          "unchained": {
+            "cost": 1,
+            "type": "nonaction"
+          },
+          "cost": 1,
+          "type": "nonaction"
+        },
+        "actionType": "spellsave",
+        "_id": "JRNKoDfO7QolQmwc",
+        "uses": {},
+        "powerAttack": {
+          "damageBonus": 2,
+          "critMultiplier": 1
+        },
+        "measureTemplate": {
+          "type": "cone",
+          "size": "20",
+          "color": null,
+          "texture": null
+        },
+        "damage": {
+          "parts": [
+            {
+              "formula": "2d6+6"
+            }
+          ]
+        },
+        "ability": {
+          "critRange": 20,
+          "critMult": 2
+        },
+        "ammo": {
+          "type": "none"
+        },
+        "img": "icons/svg/daze.svg"
+      }
+    ],
+    "attackNotes": [],
+    "effectNotes": [],
+    "links": {
+      "children": []
+    },
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "learnedAt": {
+      "class": {},
+      "domain": {},
+      "subDomain": {},
+      "elementalSchool": {},
+      "bloodline": {}
+    },
+    "level": 1,
+    "clOffset": 0,
+    "slOffset": 0,
+    "school": "abj",
+    "subschool": [],
+    "descriptors": [],
+    "components": {
+      "value": "",
+      "verbal": false,
+      "somatic": false,
+      "thought": false,
+      "emotion": false,
+      "material": false,
+      "focus": false,
+      "divineFocus": 0
+    },
+    "materials": {
+      "value": "",
+      "focus": "",
+      "gpValue": 0
+    },
+    "spellbook": "primary",
+    "preparation": {
+      "value": 1,
+      "max": 1
+    },
+    "uses": {
+      "autoDeductChargesCost": ""
+    },
+    "atWill": false,
+    "sr": true,
+    "showInQuickbar": false,
+    "domain": false,
+    "slotCost": 1,
+    "showInCombat": false,
+    "clCheck": false,
+    "material": {
+      "base": {
+        "value": "",
+        "custom": false
+      },
+      "normal": {
+        "value": "",
+        "custom": false
+      },
+      "addon": []
+    },
+    "alignments": {
+      "lawful": false,
+      "chaotic": false,
+      "good": false,
+      "evil": false
+    }
+  },
+  "name": "Fox Fire Embers",
+  "img": "icons/magic/fire/beam-strike-whip-red.webp",
+  "effects": [],
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "3WoNmkSyyvMHG5MQ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.350",
+    "systemId": "pf1",
+    "systemVersion": "11.8",
+    "createdTime": 1775526990628,
+    "modifiedTime": 1775526992291,
+    "lastModifiedBy": "3WoNmkSyyvMHG5MQ"
+  },
+  "_id": "WPMNOqjijEbriAg9",
+  "sort": 400000,
+  "_key": "!items!WPMNOqjijEbriAg9"
+}

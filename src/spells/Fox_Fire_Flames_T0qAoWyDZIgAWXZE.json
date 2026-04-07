@@ -1,13 +1,45 @@
 {
   "type": "spell",
-  "name": "Placeholder",
   "system": {
     "description": {
       "value": "",
       "instructions": ""
     },
     "tags": [],
-    "actions": [],
+    "actions": [
+      {
+        "name": "Use",
+        "activation": {
+          "unchained": {
+            "cost": 1,
+            "type": "nonaction"
+          },
+          "cost": 1,
+          "type": "nonaction"
+        },
+        "actionType": "other",
+        "_id": "wVSkzrTmHFMltxaj",
+        "uses": {},
+        "powerAttack": {
+          "damageBonus": 2,
+          "critMultiplier": 1
+        },
+        "damage": {
+          "parts": [
+            {
+              "formula": "4d6+6",
+              "types": [
+                "fire"
+              ]
+            }
+          ]
+        },
+        "ammo": {
+          "type": "none"
+        },
+        "img": "icons/svg/daze.svg"
+      }
+    ],
     "attackNotes": [],
     "effectNotes": [],
     "links": {
@@ -25,7 +57,7 @@
       "elementalSchool": {},
       "bloodline": {}
     },
-    "level": 1,
+    "level": 2,
     "clOffset": 0,
     "slOffset": 0,
     "school": "abj",
@@ -46,10 +78,10 @@
       "focus": "",
       "gpValue": 0
     },
-    "spellbook": "",
+    "spellbook": "primary",
     "preparation": {
-      "value": 0,
-      "max": 0
+      "value": 1,
+      "max": 1
     },
     "uses": {
       "autoDeductChargesCost": ""
@@ -60,16 +92,32 @@
     "domain": false,
     "slotCost": 1,
     "showInCombat": false,
-    "clCheck": false
+    "clCheck": false,
+    "material": {
+      "base": {
+        "value": "",
+        "custom": false
+      },
+      "normal": {
+        "value": "",
+        "custom": false
+      },
+      "addon": []
+    },
+    "alignments": {
+      "lawful": false,
+      "chaotic": false,
+      "good": false,
+      "evil": false
+    }
   },
-  "_id": "FjjXd99yPpaziWK1",
-  "img": "icons/svg/daze.svg",
+  "name": "Fox Fire Flames",
+  "img": "icons/magic/fire/blast-jet-stream-embers-orange.webp",
   "effects": [],
   "folder": null,
-  "sort": 100000,
   "ownership": {
     "default": 0,
-    "JteyssDE45FXYRAt": 3
+    "3WoNmkSyyvMHG5MQ": 3
   },
   "flags": {},
   "_stats": {
@@ -78,10 +126,12 @@
     "exportSource": null,
     "coreVersion": "13.350",
     "systemId": "pf1",
-    "systemVersion": "11.11",
-    "createdTime": 1775444063642,
+    "systemVersion": "11.8",
+    "createdTime": 1775526992283,
     "modifiedTime": 1775526992291,
     "lastModifiedBy": "3WoNmkSyyvMHG5MQ"
   },
-  "_key": "!items!FjjXd99yPpaziWK1"
+  "_id": "T0qAoWyDZIgAWXZE",
+  "sort": 300000,
+  "_key": "!items!T0qAoWyDZIgAWXZE"
 }
