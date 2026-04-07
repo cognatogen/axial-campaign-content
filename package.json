@@ -8,9 +8,9 @@
     "unpack:bestiary": "npx --package @foundryvtt/foundryvtt-cli fvtt package unpack bestiary --type Module --id axial-campaign-content --out src/bestiary",
     "unpack:spells": "npx --package @foundryvtt/foundryvtt-cli fvtt package unpack spells --type Module --id axial-campaign-content --out src/spells",
     "unpack": "npm run unpack:equipment & npm run unpack:bestiary & npm run unpack:spells",
-    "pack:equipment": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack src/equipment --type Module --id axial-campaign-content --out packs/equipment",
-    "pack:bestiary": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack src/bestiary --type Module --id axial-campaign-content --out packs/bestiary",
-    "pack:spells": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack src/spells --type Module --id axial-campaign-content --out packs/spells",
+    "pack:equipment": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack -n equipment --in src/equipment --out packs --type Module --id axial-campaign-content",
+    "pack:bestiary": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack -n bestiary --in src/bestiary --out packs --type Module --id axial-campaign-content",
+    "pack:spells": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack -n spells --in src/spells --out packs --type Module --id axial-campaign-content",
     "pack": "npm run pack:equipment & npm run pack:bestiary & npm run pack:spells",
     "proxy": "node proxy-server.mjs"
   },
