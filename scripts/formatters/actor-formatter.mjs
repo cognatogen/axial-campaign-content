@@ -262,6 +262,7 @@ export function formatActor(actor, imageFilename = null) {
   lines.push("");
   lines.push(`[[Category:Creatures]]`);
   lines.push(`[[Category:CR ${cr}]]`);
+  if (creatureType) lines.push(`[[Category:${creatureType}]]`);
 
   return {
     title: actor.name,
