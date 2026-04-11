@@ -22,6 +22,14 @@ export function formatFeat(item, imageFilename = null) {
   const s = item.system;
   const lines = [];
 
+  // Portrait image
+  if (imageFilename) {
+    lines.push(`[[File:${imageFilename}|thumb|right|300px|${item.name}]]`);
+  }
+
+  // Open stat block wrapper
+  lines.push(`<div class="pointed-statblock">`);
+
   // ========== HEADER ==========
   const featType = FEAT_TYPE_MAP[s.subType] || FEAT_TYPE_MAP[s.featType] || "";
   const abilType = ABILITY_TYPE_LABELS[s.abilityType] || "";
@@ -30,19 +38,23 @@ export function formatFeat(item, imageFilename = null) {
   if (featType) titleSuffix = ` (${featType})`;
   else if (abilType) titleSuffix = ` (${abilType})`;
 
-  lines.push(`= ${item.name}${titleSuffix} =`);
+  // Title header — dark blue with white text
+  lines.push(titleHeader(`${item.name}${titleSuffix}`));
 
-  if (imageFilename) {
-    lines.push(`[[File:${imageFilename}|thumb|right|300px|${item.name}]]`);
-  }
-
-  // ========== DESCRIPTION / FLAVOR ==========
+  // ========== FLAVOR / DESCRIPTION ==========
   const desc = s.description?.value;
   if (desc) {
     const descText = htmlToWikitext(desc).trim();
     if (descText) {
-      lines.push("");
-      lines.push(descText);
+      // First sentence or paragraph as italic flavor, rest as benefit
+      const { flavor, benefit } = splitDescription(descText);
+      if (flavor) {
+        lines.push(`<p class="pointed-statblock-description" style="font-style:italic;">${flavor}</p>`);
+      }
+      if (benefit) {
+        lines.push("");
+        lines.push(`'''Benefit:''' ${benefit}`);
+      }
     }
   }
 
@@ -53,19 +65,17 @@ export function formatFeat(item, imageFilename = null) {
     lines.push(`'''Prerequisite(s):''' ${prereqs}`);
   }
 
-  // ========== BENEFIT ==========
-  // For feats, the description IS the benefit in most cases.
-  // If there are context notes, list them as additional benefits.
+  // ========== CONTEXT NOTES (additional benefits) ==========
   const contextNotes = s.contextNotes;
   if (contextNotes && contextNotes.length > 0) {
     const noteTexts = contextNotes.map(n => n.text).filter(Boolean);
     if (noteTexts.length > 0) {
       lines.push("");
-      lines.push(`'''Benefit(s):''' ${noteTexts.join("; ")}`);
+      lines.push(`'''Special:''' ${noteTexts.join("; ")}`);
     }
   }
 
-  // ========== CHANGES / MECHANICAL EFFECTS ==========
+  // ========== MECHANICAL EFFECTS ==========
   const changes = s.changes;
   if (changes && changes.length > 0) {
     const changeParts = changes
@@ -80,11 +90,14 @@ export function formatFeat(item, imageFilename = null) {
     }
   }
 
-  // ========== SPECIAL ==========
+  // ========== SPECIAL (CR offset, etc.) ==========
   if (s.crOffset) {
     lines.push("");
     lines.push(`'''Special:''' CR offset ${s.crOffset >= 0 ? "+" : ""}${s.crOffset}`);
   }
+
+  // Close stat block wrapper
+  lines.push(`</div>`);
 
   // Categories
   lines.push("");
@@ -98,6 +111,27 @@ export function formatFeat(item, imageFilename = null) {
 }
 
 // --- Helper functions ---
+
+function titleHeader(name) {
+  return `<p class="pointed-statblock-title" style="font-size:18px; font-weight:bold; background:#1a3c5e; color:white; padding:4px 8px;">${name}</p>`;
+}
+
+/**
+ * Split description text into a short flavor line and the remaining benefit text.
+ * If the description is short (one sentence/paragraph), treat it all as benefit.
+ */
+function splitDescription(text) {
+  // If there's a clear paragraph break, first paragraph is flavor
+  const paragraphs = text.split(/\n\n+/);
+  if (paragraphs.length > 1) {
+    return {
+      flavor: paragraphs[0].trim(),
+      benefit: paragraphs.slice(1).join("\n\n").trim()
+    };
+  }
+  // Single block — treat the whole thing as benefit text
+  return { flavor: "", benefit: text };
+}
 
 function formatPrerequisites(item) {
   const s = item.system;

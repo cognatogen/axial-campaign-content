@@ -25,8 +25,8 @@ const WEAPON_TYPE_MAP = {
 };
 
 const ARMOR_TYPE_MAP = {
-  lightArmor: "Light armor", mediumArmor: "Medium armor",
-  heavyArmor: "Heavy armor", shield: "Shield"
+  lightArmor: "Light Armor", mediumArmor: "Medium Armor",
+  heavyArmor: "Heavy Armor", shield: "Shield"
 };
 
 /**
@@ -37,15 +37,171 @@ export function formatItem(item, imageFilename = null) {
   const s = item.system;
   const lines = [];
 
-  // ========== HEADER ==========
-  lines.push(`= ${item.name} =`);
-
+  // Portrait image
   if (imageFilename) {
     lines.push(`[[File:${imageFilename}|thumb|right|300px|${item.name}]]`);
   }
 
-  // ========== STAT LINE ==========
-  // Aura; CL; Slot; Price; Weight
+  // Open stat block wrapper
+  lines.push(`<div class="pointed-statblock">`);
+
+  // ========== TYPE-SPECIFIC FORMATTING ==========
+  if (item.type === "weapon") {
+    formatWeaponBlock(lines, item);
+  } else if (item.type === "equipment" && isArmor(item)) {
+    formatArmorBlock(lines, item);
+  } else {
+    // Magic items, wondrous items, consumables, loot
+    formatMagicItemBlock(lines, item);
+  }
+
+  // Close stat block wrapper
+  lines.push(`</div>`);
+
+  // Categories
+  lines.push("");
+  const categories = getItemCategories(item);
+  for (const cat of categories) {
+    lines.push(`[[Category:${cat}]]`);
+  }
+
+  return {
+    title: item.name,
+    wikitext: lines.join("\n")
+  };
+}
+
+// --- Weapon formatting (d20pfsrd style) ---
+
+function formatWeaponBlock(lines, item) {
+  const s = item.system;
+
+  // Title header
+  lines.push(titleHeader(item.name));
+
+  // Stats block — all in one section with <br/> between lines
+  const statLines = [];
+
+  const price = formatPrice(s);
+  const weight = s.weight?.value;
+  const priceLine = [];
+  if (price) priceLine.push(`'''Cost''' ${price}`);
+  if (weight) priceLine.push(`'''Weight''' ${weight} lb${weight !== 1 ? "s" : ""}.`);
+  if (priceLine.length > 0) statLines.push(priceLine.join(" "));
+
+  // Damage and critical
+  const dmgLine = [];
+  const actions = s.actions;
+  if (actions && actions.length > 0) {
+    const action = actions[0];
+    const dmgParts = action.damage?.parts || [];
+    const dmgStr = dmgParts.map(p => p.formula || p[0] || "").filter(Boolean).join(" + ");
+    if (dmgStr) dmgLine.push(`'''Damage''' ${dmgStr}`);
+  }
+  if (s.ability?.critRange) dmgLine.push(`'''Critical''' ${s.ability.critRange}/x${s.ability.critMult || 2}`);
+  else if (s.ability?.critMult && s.ability.critMult > 2) dmgLine.push(`'''Critical''' x${s.ability.critMult}`);
+  // Damage types
+  const damageTypes = s.damageTypes || [];
+  if (damageTypes.length > 0) dmgLine.push(`'''Type''' ${damageTypes.join(" or ")}`);
+  if (dmgLine.length > 0) statLines.push(dmgLine.join(" "));
+
+  // Category and proficiency
+  const catLine = [];
+  const weaponSubtype = WEAPON_SUBTYPE_MAP[s.weaponSubtype] || s.weaponSubtype || "";
+  if (weaponSubtype) catLine.push(`'''Category''' ${weaponSubtype}`);
+  const weaponType = WEAPON_TYPE_MAP[s.subType] || s.subType || "";
+  if (weaponType) catLine.push(`'''Proficiency''' ${weaponType}`);
+  if (catLine.length > 0) statLines.push(catLine.join(" "));
+
+  // Enhancement / masterwork / material
+  const qualLine = [];
+  if (s.masterwork) qualLine.push(`'''Quality''' Masterwork`);
+  if (s.enh) qualLine.push(`'''Enhancement''' +${s.enh}`);
+  const material = s.material?.normal?.value || s.material?.base?.value;
+  if (material) qualLine.push(`'''Material''' ${material}`);
+  if (qualLine.length > 0) statLines.push(qualLine.join(" "));
+
+  lines.push(statLines.join("<br/>\n"));
+
+  // Description
+  const desc = s.description?.value;
+  if (desc) {
+    const descText = htmlToWikitext(desc).trim();
+    if (descText) {
+      lines.push("");
+      lines.push(descText);
+    }
+  }
+}
+
+// --- Armor formatting (d20pfsrd style) ---
+
+function formatArmorBlock(lines, item) {
+  const s = item.system;
+
+  // Title header
+  lines.push(titleHeader(item.name));
+
+  const statLines = [];
+
+  // Armor type on its own line
+  const armorType = ARMOR_TYPE_MAP[s.equipmentSubtype] || s.equipmentSubtype || "";
+  if (armorType) statLines.push(`'''${armorType}'''`);
+
+  // Cost and weight
+  const priceLine = [];
+  const price = formatPrice(s);
+  if (price) priceLine.push(`'''Cost''' ${price}`);
+  const weight = s.weight?.value;
+  if (weight) priceLine.push(`'''Weight''' ${weight} lb${weight !== 1 ? "s" : ""}.`);
+  if (priceLine.length > 0) statLines.push(priceLine.join("; "));
+
+  // Armor bonus, max dex, ACP
+  const armorStats = [];
+  if (s.armor?.value) armorStats.push(`'''Armor Bonus''' +${s.armor.value}`);
+  if (s.armor?.dex != null) armorStats.push(`'''Max Dex Bonus''' +${s.armor.dex}`);
+  if (s.armor?.acp) armorStats.push(`'''Armor Check Penalty''' ${s.armor.acp}`);
+  if (armorStats.length > 0) statLines.push(armorStats.join("; "));
+
+  // Spell failure and speed
+  const miscLine = [];
+  if (s.spellFailure) miscLine.push(`'''Arcane Spell Failure Chance''' ${s.spellFailure}%`);
+  // Speed adjustments based on armor type
+  if (s.equipmentSubtype === "mediumArmor") miscLine.push(`'''Speed''' 20 ft./15 ft.`);
+  else if (s.equipmentSubtype === "heavyArmor") miscLine.push(`'''Speed''' 20 ft./15 ft.`);
+  else if (s.equipmentSubtype === "lightArmor") miscLine.push(`'''Speed''' 30 ft./20 ft.`);
+  if (miscLine.length > 0) statLines.push(miscLine.join("; "));
+
+  // Enhancement / material
+  const qualLine = [];
+  if (s.masterwork) qualLine.push(`'''Quality''' Masterwork`);
+  if (s.enh) qualLine.push(`'''Enhancement''' +${s.enh}`);
+  const material = s.material?.normal?.value || s.material?.base?.value;
+  if (material) qualLine.push(`'''Material''' ${material}`);
+  if (qualLine.length > 0) statLines.push(qualLine.join("; "));
+
+  lines.push(statLines.join("<br/>\n"));
+
+  // Description
+  const desc = s.description?.value;
+  if (desc) {
+    const descText = htmlToWikitext(desc).trim();
+    if (descText) {
+      lines.push("");
+      lines.push(descText);
+    }
+  }
+}
+
+// --- Magic Item / Wondrous Item formatting (d20pfsrd style) ---
+
+function formatMagicItemBlock(lines, item) {
+  const s = item.system;
+
+  // Title header
+  lines.push(titleHeader(item.name));
+
+  // Stat line: Aura; CL; Slot; Price; Weight — all on one line with semicolons
   const statParts = [];
 
   const aura = formatAura(s);
@@ -67,99 +223,35 @@ export function formatItem(item, imageFilename = null) {
     lines.push(statParts.join("; "));
   }
 
-  // ========== TYPE-SPECIFIC STATS ==========
-  if (item.type === "weapon") {
-    lines.push("");
-    lines.push(formatWeaponStats(item));
-  } else if (item.type === "equipment" && isArmor(item)) {
-    lines.push("");
-    lines.push(formatArmorStats(item));
-  }
-
-  // ========== DESCRIPTION ==========
+  // Description
   const desc = s.description?.value;
   if (desc) {
     const descText = htmlToWikitext(desc).trim();
     if (descText) {
-      lines.push("");
-      lines.push(`== Description ==`);
-      lines.push(descText);
+      lines.push(sectionDivider("DESCRIPTION"));
+      lines.push(`<p class="pointed-statblock-description" style="font-style:italic;">${descText}</p>`);
     }
   }
 
-  // ========== CONSTRUCTION ==========
+  // Construction requirements
   if (cl || s.craftingRequirements) {
-    lines.push("");
-    lines.push(`== Construction Requirements ==`);
+    lines.push(sectionDivider("CONSTRUCTION REQUIREMENTS"));
     const constructLines = [];
     if (cl) constructLines.push(`'''CL''' ${ordinal(cl)}`);
     constructLines.push(`'''Cost''' ${formatCost(s)}`);
     lines.push(constructLines.join("; "));
   }
-
-  // Categories
-  lines.push("");
-  const categories = getItemCategories(item);
-  for (const cat of categories) {
-    lines.push(`[[Category:${cat}]]`);
-  }
-
-  return {
-    title: item.name,
-    wikitext: lines.join("\n")
-  };
 }
 
-// --- Weapon-specific formatting ---
+// --- Shared helper functions ---
 
-function formatWeaponStats(item) {
-  const s = item.system;
-  const parts = [];
-
-  const weaponType = WEAPON_TYPE_MAP[s.subType] || s.subType || "";
-  const weaponSubtype = WEAPON_SUBTYPE_MAP[s.weaponSubtype] || s.weaponSubtype || "";
-  if (weaponType || weaponSubtype) {
-    parts.push(`'''Type''' ${[weaponType, weaponSubtype].filter(Boolean).join(" ")}`);
-  }
-
-  if (s.masterwork) parts.push(`'''Quality''' Masterwork`);
-  if (s.enh) parts.push(`'''Enhancement''' +${s.enh}`);
-
-  // Try to get damage from actions
-  const actions = s.actions;
-  if (actions && actions.length > 0) {
-    const action = actions[0];
-    const dmgParts = action.damage?.parts || [];
-    const dmgStr = dmgParts.map(p => p.formula || p[0] || "").filter(Boolean).join(" + ");
-    if (dmgStr) parts.push(`'''Damage''' ${dmgStr}`);
-    if (action.attackBonus) parts.push(`'''Attack Bonus''' ${action.attackBonus}`);
-  }
-
-  // Material
-  const material = s.material?.normal?.value || s.material?.base?.value;
-  if (material) parts.push(`'''Material''' ${material}`);
-
-  return parts.join("<br/>\n");
+function titleHeader(name) {
+  return `<p class="pointed-statblock-title" style="font-size:18px; font-weight:bold; background:#1a3c5e; color:white; padding:4px 8px;">${name}</p>`;
 }
 
-// --- Armor-specific formatting ---
-
-function formatArmorStats(item) {
-  const s = item.system;
-  const parts = [];
-
-  const armorType = ARMOR_TYPE_MAP[s.equipmentSubtype] || s.equipmentSubtype || "";
-  if (armorType) parts.push(`'''Type''' ${armorType}`);
-
-  if (s.armor?.value) parts.push(`'''Armor Bonus''' +${s.armor.value}`);
-  if (s.armor?.dex != null) parts.push(`'''Max Dex''' +${s.armor.dex}`);
-  if (s.armor?.acp) parts.push(`'''Armor Check Penalty''' ${s.armor.acp}`);
-  if (s.spellFailure) parts.push(`'''Arcane Spell Failure''' ${s.spellFailure}%`);
-
-  return parts.join("<br/>\n");
+function sectionDivider(label) {
+  return `\n<p class="pointed-statblock-divider" style="font-size:10px; border-top:solid thin; border-bottom:solid thin; text-transform:uppercase; overflow:hidden;">${label}</p>`;
 }
-
-// --- Helper functions ---
 
 function formatAura(s) {
   if (s.aura?.school) {
@@ -183,7 +275,6 @@ function formatPrice(s) {
   const price = s.price;
   if (!price) return "";
   if (typeof price === "object") {
-    // v13 might store price as an object
     return price.value ? `${price.value.toLocaleString()} gp` : "";
   }
   return `${Number(price).toLocaleString()} gp`;

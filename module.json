@@ -2,7 +2,7 @@
   "id": "axial-campaign-content",
   "title": "Axial Campaign Content for Pathfinder 1st Edition",
   "description": "Shared compendium module for the Axial campaign — equipment, bestiary, and more for PF1e.",
-  "version": "1.3.9",
+  "version": "1.4.1",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -40,6 +40,20 @@
       "name": "spells",
       "label": "Axial Spells",
       "path": "packs/spells",
+      "type": "Item",
+      "system": "pf1"
+    },
+    {
+      "name": "races",
+      "label": "Axial Races",
+      "path": "packs/races",
+      "type": "Item",
+      "system": "pf1"
+    },
+    {
+      "name": "classes",
+      "label": "Axial Classes",
+      "path": "packs/classes",
       "type": "Item",
       "system": "pf1"
     }

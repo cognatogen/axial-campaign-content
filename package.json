@@ -7,11 +7,15 @@
     "unpack:equipment": "npx --package @foundryvtt/foundryvtt-cli fvtt package unpack equipment --type Module --id axial-campaign-content --out src/equipment",
     "unpack:bestiary": "npx --package @foundryvtt/foundryvtt-cli fvtt package unpack bestiary --type Module --id axial-campaign-content --out src/bestiary",
     "unpack:spells": "npx --package @foundryvtt/foundryvtt-cli fvtt package unpack spells --type Module --id axial-campaign-content --out src/spells",
-    "unpack": "npm run unpack:equipment & npm run unpack:bestiary & npm run unpack:spells",
+    "unpack:races": "npx --package @foundryvtt/foundryvtt-cli fvtt package unpack races --type Module --id axial-campaign-content --out src/races",
+    "unpack:classes": "npx --package @foundryvtt/foundryvtt-cli fvtt package unpack classes --type Module --id axial-campaign-content --out src/classes",
+    "unpack": "npm run unpack:equipment & npm run unpack:bestiary & npm run unpack:spells & npm run unpack:races & npm run unpack:classes",
     "pack:equipment": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack -n equipment --in src/equipment --out packs --type Module --id axial-campaign-content",
     "pack:bestiary": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack -n bestiary --in src/bestiary --out packs --type Module --id axial-campaign-content",
     "pack:spells": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack -n spells --in src/spells --out packs --type Module --id axial-campaign-content",
-    "pack": "npm run pack:equipment & npm run pack:bestiary & npm run pack:spells",
+    "pack:races": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack -n races --in src/races --out packs --type Module --id axial-campaign-content",
+    "pack:classes": "npx --package @foundryvtt/foundryvtt-cli fvtt package pack -n classes --in src/classes --out packs --type Module --id axial-campaign-content",
+    "pack": "npm run pack:equipment & npm run pack:bestiary & npm run pack:spells & npm run pack:races & npm run pack:classes",
     "proxy": "node proxy-server.mjs"
   },
   "devDependencies": {

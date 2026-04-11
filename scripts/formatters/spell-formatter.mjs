@@ -25,12 +25,16 @@ export function formatSpell(item, imageFilename = null) {
   const s = item.system;
   const lines = [];
 
-  // ========== HEADER ==========
-  lines.push(`= ${item.name} =`);
-
+  // Portrait image
   if (imageFilename) {
     lines.push(`[[File:${imageFilename}|thumb|right|300px|${item.name}]]`);
   }
+
+  // Open stat block wrapper
+  lines.push(`<div class="pointed-statblock">`);
+
+  // Title header — dark blue with white text (matches actor formatter)
+  lines.push(titleHeader(item.name));
 
   // ========== SCHOOL & LEVEL LINE ==========
   const schoolLine = [];
@@ -53,7 +57,9 @@ export function formatSpell(item, imageFilename = null) {
 
   lines.push(schoolLine.join("; "));
 
-  // ========== CASTING LINE ==========
+  // ========== CASTING ==========
+  lines.push(sectionDivider("CASTING"));
+
   const castingLines = [];
 
   // Casting Time
@@ -72,10 +78,11 @@ export function formatSpell(item, imageFilename = null) {
 
   lines.push(castingLines.join("<br/>\n"));
 
-  // ========== EFFECT LINE ==========
+  // ========== EFFECT ==========
+  lines.push(sectionDivider("EFFECT"));
+
   const effectLines = [];
 
-  // Range
   if (actions && actions.length > 0) {
     const action = actions[0];
     if (action.measureTemplate?.type) {
@@ -109,11 +116,13 @@ export function formatSpell(item, imageFilename = null) {
   if (desc) {
     const descText = htmlToWikitext(desc).trim();
     if (descText) {
-      lines.push("");
-      lines.push(`== Description ==`);
-      lines.push(descText);
+      lines.push(sectionDivider("DESCRIPTION"));
+      lines.push(`<p class="pointed-statblock-description" style="font-style:italic;">${descText}</p>`);
     }
   }
+
+  // Close stat block wrapper
+  lines.push(`</div>`);
 
   // Categories
   lines.push("");
@@ -128,6 +137,14 @@ export function formatSpell(item, imageFilename = null) {
 }
 
 // --- Helper functions ---
+
+function titleHeader(name) {
+  return `<p class="pointed-statblock-title" style="font-size:18px; font-weight:bold; background:#1a3c5e; color:white; padding:4px 8px;">${name}</p>`;
+}
+
+function sectionDivider(label) {
+  return `\n<p class="pointed-statblock-divider" style="font-size:10px; border-top:solid thin; border-bottom:solid thin; text-transform:uppercase; overflow:hidden;">${label}</p>`;
+}
 
 function formatSpellLevels(s) {
   const learnedAt = s.learnedAt?.class;
