@@ -4,7 +4,7 @@
   "name": "Risotto al Vialone",
   "system": {
     "description": {
-      "value": "",
+      "value": "<p>+1 Dexterity</p>",
       "instructions": ""
     },
     "tags": [],
@@ -61,7 +61,7 @@
     "hideFromToken": false,
     "showInQuickbar": false
   },
-  "img": "assets/OIP-2381433255.jpg",
+  "img": "modules/axial-campaign-content/img/item/food/risotto%20al%20vialone.jpg",
   "effects": [],
   "sort": 0,
   "ownership": {
@@ -76,8 +76,8 @@
     "coreVersion": "13.351",
     "systemId": "pf1",
     "systemVersion": "11.11",
-    "createdTime": 1775509838124,
-    "modifiedTime": 1775509838124,
+    "createdTime": 1776110903361,
+    "modifiedTime": 1776110903361,
     "lastModifiedBy": "JteyssDE45FXYRAt"
   },
   "_id": "AwoJcA2eRCLCdHwI",

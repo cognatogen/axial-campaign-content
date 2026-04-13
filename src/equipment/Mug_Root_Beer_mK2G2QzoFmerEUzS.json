@@ -4,7 +4,7 @@
   "name": "Mug Root Beer",
   "system": {
     "description": {
-      "value": "<p>Gain 1d6 + 1 Temporary Vigor.</p>",
+      "value": "<p>Gain 3d6 + 2 temporary Vigor.</p>",
       "instructions": ""
     },
     "tags": [],
@@ -69,7 +69,7 @@
     "hideFromToken": false,
     "showInQuickbar": false
   },
-  "img": "assets/8225738_orig-227074691-removebg-preview.png",
+  "img": "modules/axial-campaign-content/img/item/drinks/mugs.png",
   "effects": [],
   "sort": 0,
   "ownership": {
@@ -84,8 +84,8 @@
     "coreVersion": "13.351",
     "systemId": "pf1",
     "systemVersion": "11.11",
-    "createdTime": 1775509834869,
-    "modifiedTime": 1775509834869,
+    "createdTime": 1776110934950,
+    "modifiedTime": 1776110934950,
     "lastModifiedBy": "JteyssDE45FXYRAt"
   },
   "_id": "mK2G2QzoFmerEUzS",

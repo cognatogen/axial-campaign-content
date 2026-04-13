@@ -69,7 +69,7 @@
     "hideFromToken": false,
     "showInQuickbar": false
   },
-  "img": "assets/berlin-oct-07-can-with-7up-or-seven-up-classic-logotype-isolated-on-white-front-view-in-berlin-on-october-07-2023-in-germany-2T97428-1883820127-removebg-preview.png",
+  "img": "modules/axial-campaign-content/img/item/drinks/7up.png",
   "effects": [],
   "sort": 0,
   "ownership": {
@@ -84,8 +84,8 @@
     "coreVersion": "13.351",
     "systemId": "pf1",
     "systemVersion": "11.11",
-    "createdTime": 1775509834869,
-    "modifiedTime": 1775509834869,
+    "createdTime": 1776110934950,
+    "modifiedTime": 1776110934950,
     "lastModifiedBy": "JteyssDE45FXYRAt"
   },
   "_id": "GAM2qgzyeWTil5YA",

@@ -4,7 +4,7 @@
   "name": "Linguine allo Scoglio",
   "system": {
     "description": {
-      "value": "",
+      "value": "<p>+2 on all skill checks.</p>",
       "instructions": ""
     },
     "tags": [],
@@ -16,14 +16,6 @@
         "priority": 0,
         "target": "skills",
         "formula": "2"
-      },
-      {
-        "type": "untyped",
-        "_id": "AllwtFAL",
-        "operator": "add",
-        "priority": 0,
-        "target": "skill.prf",
-        "formula": "-2"
       }
     ],
     "changeFlags": {
@@ -69,7 +61,7 @@
     "hideFromToken": false,
     "showInQuickbar": false
   },
-  "img": "assets/OIP-599048641.jpg",
+  "img": "modules/axial-campaign-content/img/item/food/Linguine%20allo%20Scoglio.jpg",
   "effects": [],
   "sort": 0,
   "ownership": {
@@ -84,8 +76,8 @@
     "coreVersion": "13.351",
     "systemId": "pf1",
     "systemVersion": "11.11",
-    "createdTime": 1775509838124,
-    "modifiedTime": 1775509838124,
+    "createdTime": 1776110903361,
+    "modifiedTime": 1776110903361,
     "lastModifiedBy": "JteyssDE45FXYRAt"
   },
   "_id": "xKZx2wZTwahxRyBg",
