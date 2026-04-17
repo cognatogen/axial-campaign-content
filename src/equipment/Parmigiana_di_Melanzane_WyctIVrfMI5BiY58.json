@@ -4,7 +4,7 @@
   "name": "Parmigiana di Melanzane",
   "system": {
     "description": {
-      "value": "",
+      "value": "<p>+1 Wisdom</p>",
       "instructions": ""
     },
     "tags": [],
@@ -61,7 +61,7 @@
     "hideFromToken": false,
     "showInQuickbar": false
   },
-  "img": "assets/OIP-1958648667.jpg",
+  "img": "modules/axial-campaign-content/img/item/food/parmigiana%20di%20melanzane.jpg",
   "effects": [],
   "sort": 0,
   "ownership": {
@@ -76,8 +76,8 @@
     "coreVersion": "13.351",
     "systemId": "pf1",
     "systemVersion": "11.11",
-    "createdTime": 1775509838124,
-    "modifiedTime": 1775509838124,
+    "createdTime": 1776110903361,
+    "modifiedTime": 1776110903361,
     "lastModifiedBy": "JteyssDE45FXYRAt"
   },
   "_id": "WyctIVrfMI5BiY58",

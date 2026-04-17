@@ -4,7 +4,7 @@
   "name": "Gnocchi di Pollo",
   "system": {
     "description": {
-      "value": "",
+      "value": "<p>+10' land speed, +2 AC vs. attacks of opportunity.</p>",
       "instructions": ""
     },
     "tags": [],
@@ -31,7 +31,7 @@
     },
     "contextNotes": [
       {
-        "text": "+2 AC vs. attacks of opportunity",
+        "text": "+[[2]] AC vs. attacks of opportunity",
         "target": "ac"
       }
     ],
@@ -66,7 +66,7 @@
     "hideFromToken": false,
     "showInQuickbar": false
   },
-  "img": "assets/OIP-3345487217.jpg",
+  "img": "modules/axial-campaign-content/img/item/food/gnocchi%20di%20pollo.jpg",
   "effects": [],
   "sort": 0,
   "ownership": {
@@ -81,8 +81,8 @@
     "coreVersion": "13.351",
     "systemId": "pf1",
     "systemVersion": "11.11",
-    "createdTime": 1775509838124,
-    "modifiedTime": 1775509838124,
+    "createdTime": 1776110903361,
+    "modifiedTime": 1776110903361,
     "lastModifiedBy": "JteyssDE45FXYRAt"
   },
   "_id": "D89s6wCZXtk60aNI",

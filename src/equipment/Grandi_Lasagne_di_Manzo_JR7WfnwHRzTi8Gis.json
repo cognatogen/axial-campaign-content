@@ -4,7 +4,7 @@
   "name": "Grandi Lasagne di Manzo",
   "system": {
     "description": {
-      "value": "",
+      "value": "<p>+3 damage when using the Power Attack and/or Deadly Aim feats.</p>",
       "instructions": ""
     },
     "tags": [],
@@ -57,7 +57,7 @@
     "hideFromToken": false,
     "showInQuickbar": false
   },
-  "img": "assets/Beef_Lasagne_f4c0f772-7af5-41d6-b108-4fcc9236bfe4-746991157.jpg",
+  "img": "modules/axial-campaign-content/img/item/food/Grande%20Lasagna%20di%20Manzo.jpg",
   "effects": [],
   "sort": 0,
   "ownership": {
@@ -72,8 +72,8 @@
     "coreVersion": "13.351",
     "systemId": "pf1",
     "systemVersion": "11.11",
-    "createdTime": 1775509838124,
-    "modifiedTime": 1775509838124,
+    "createdTime": 1776110903361,
+    "modifiedTime": 1776110903361,
     "lastModifiedBy": "JteyssDE45FXYRAt"
   },
   "_id": "JR7WfnwHRzTi8Gis",

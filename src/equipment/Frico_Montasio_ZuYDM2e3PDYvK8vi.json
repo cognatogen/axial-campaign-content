@@ -4,7 +4,7 @@
   "name": "Frico Montasio",
   "system": {
     "description": {
-      "value": "",
+      "value": "<p>+1 on all Performance Combat checks.</p>",
       "instructions": ""
     },
     "tags": [],
@@ -57,7 +57,7 @@
     "hideFromToken": false,
     "showInQuickbar": false
   },
-  "img": "assets/OIP-2254078485.jpg",
+  "img": "modules/axial-campaign-content/img/item/food/frico%20montasio.jpg",
   "effects": [],
   "sort": 0,
   "ownership": {
@@ -72,8 +72,8 @@
     "coreVersion": "13.351",
     "systemId": "pf1",
     "systemVersion": "11.11",
-    "createdTime": 1775509838124,
-    "modifiedTime": 1775509838124,
+    "createdTime": 1776110903361,
+    "modifiedTime": 1776110903361,
     "lastModifiedBy": "JteyssDE45FXYRAt"
   },
   "_id": "ZuYDM2e3PDYvK8vi",
