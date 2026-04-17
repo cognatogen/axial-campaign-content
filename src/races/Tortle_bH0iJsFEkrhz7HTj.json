@@ -1,0 +1,147 @@
+{
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.350",
+    "systemId": "pf1",
+    "systemVersion": "11.8",
+    "createdTime": 1776414676164,
+    "modifiedTime": 1776423603689,
+    "lastModifiedBy": "6WAxrsflClmoJCjN"
+  },
+  "folder": null,
+  "img": "modules/axial-campaign-content/Icons/Tortle%20Icon.png",
+  "name": "Tortle",
+  "system": {
+    "description": {
+      "value": "<h2>Standard Racial Traits</h2><ul><li><strong>Ability Scores</strong>: Tortles as tough as they are wise though their large shells tend to slow them down. Tortles gain a +2 Constitution, +2 Wisdom but a -2 on Dexterity.</li><li><strong>Type</strong>: Tortles are humanoids with the Tortle subtype.</li><li><strong>Size</strong>: Tortles are Medium creatures and thus have no bonuses or penalties due to their size.</li><li><strong>Base Speed</strong>: <strong>Tortles have a base speed of 20ft feet and a 20ft swim speed</strong></li><li><strong>Languages</strong>: Tortles begin speaking Common and Aquan. Tortles with high Intelligence scores can choose (Aklo, Boggard, Draconic, Gripply, Sylvan)</li></ul><h3>Racial Traits</h3><ul><li><strong>Ocean Dweller</strong>: Tortles can hold their breath for 1 hour for each point of constitution and taking a standard or full-round action does not reduce how much longer a Tortle can hold their breath.</li><li><strong>Hard Shell</strong>: Your hearty shell grants a  +1 natural armor bonus.</li><li><strong>Hero in a half shel</strong>l: while in combat Tortles are capable of using their shells in combat granting a +2 to ac while fighting defensively, using the total defense action or provoking an attack of opportunity.</li><li><strong>Hardworking</strong>: Tortles gain Endurance as a Bonus Feat</li></ul><h3>Alternate Racial Traits</h3><ul><li><strong>Dune Walker</strong>: By adapting to scorching desserts instead of the cool Oceans these Tortles can traverse harsh environments with little impediment. These Tortles ignore rough terrain due to sand or soft earth and gain a +4 against extreme heat and can go without water for a month before having to make constitution checks due to dehydration. This replaces a Tortles natural swim speed and Ocean Dweller trait.</li><li><strong>Snapping Jaw</strong>: Tortles with sharp jaws are far more aggressive, often attacking the moment they are threatened. Gaining a primary bite attack that deals 1d4 damage and gains a +1 on attack rolls when used to make an attack of opportunity. This replaces the Hero in a Half Shell trait.</li><li><strong>Spiked Shell</strong>: Some tortles have grown sharp spikes on the back of their shells that causes predators to think twice before attacking. Enemies that attack the Tortle with a non reach weapon in melee take 1d2 + 1/2 the Tortles Strength bonus piercing damage. This replaces the hard shell trait.</li><li><strong>Deep Diver</strong>: Some Tortles choose to remain in the sea rarely going topside but gaining greater speed in the water causing their shells to become lighter. Such Tortles increase their swim speed to 30ft. in addition they gain Darkvision 30ft and are amphibian. This changes a Tortles base speeds and Ocean Dweller trait and replaces the Hard shell Trait.</li><li><strong>Knowledge Scribe</strong>: instead of working, some Tortles dedicate themselves preserving their people collective knowledge Gaining the Scholar Feat. This replaces the Hardworking Trait</li></ul>",
+      "instructions": ""
+    },
+    "tags": [],
+    "changes": [
+      {
+        "_id": "e2jjebq2",
+        "formula": "2",
+        "target": "con",
+        "type": "racial",
+        "operator": "add",
+        "priority": 0
+      },
+      {
+        "_id": "js6rkdss",
+        "formula": "2",
+        "target": "wisMod",
+        "type": "racial",
+        "operator": "add",
+        "priority": 0
+      },
+      {
+        "_id": "un15z00u",
+        "formula": "-2",
+        "target": "dex",
+        "type": "racial"
+      },
+      {
+        "_id": "sw5ujxwc",
+        "formula": "1",
+        "target": "nac",
+        "type": "base",
+        "operator": "add",
+        "priority": 0
+      }
+    ],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [],
+    "links": {
+      "children": []
+    },
+    "armorProf": [],
+    "weaponProf": [],
+    "languages": [
+      "common",
+      "aquan"
+    ],
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "size": "med",
+    "speeds": {
+      "land": 20,
+      "fly": null,
+      "flyManeuverability": "average",
+      "swim": 20,
+      "climb": null,
+      "burrow": null
+    },
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "creatureSubtypes": [
+      "Tortle"
+    ],
+    "classSkills": {
+      "swm": true,
+      "acr": false,
+      "apr": false,
+      "art": false,
+      "blf": false,
+      "clm": false,
+      "crf": false,
+      "dip": false,
+      "dev": false,
+      "dis": false,
+      "esc": false,
+      "fly": false,
+      "han": false,
+      "hea": false,
+      "int": false,
+      "kar": false,
+      "kdu": false,
+      "ken": false,
+      "kge": false,
+      "khi": false,
+      "klo": false,
+      "kna": false,
+      "kno": false,
+      "kpl": false,
+      "kre": false,
+      "lin": false,
+      "lor": false,
+      "per": false,
+      "prf": false,
+      "pro": false,
+      "rid": false,
+      "sen": false,
+      "slt": false,
+      "spl": false,
+      "ste": false,
+      "sur": false,
+      "umd": false
+    },
+    "sources": [],
+    "quadruped": false
+  },
+  "type": "race",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "6WAxrsflClmoJCjN": 3
+  },
+  "flags": {},
+  "_id": "bH0iJsFEkrhz7HTj",
+  "sort": 200000,
+  "_key": "!items!bH0iJsFEkrhz7HTj"
+}

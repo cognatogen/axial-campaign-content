@@ -1,0 +1,155 @@
+{
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.350",
+    "systemId": "pf1",
+    "systemVersion": "11.8",
+    "createdTime": 1776412040246,
+    "modifiedTime": 1776423525793,
+    "lastModifiedBy": "6WAxrsflClmoJCjN"
+  },
+  "folder": null,
+  "img": "modules/axial-campaign-content/Icons/Mimeo%20Folk%20Icon.png",
+  "name": "Mimeo Folk",
+  "system": {
+    "description": {
+      "value": "<h2>Starting Age</h2><table><thead><tr><th>Adulthood</th><th>Intuitive<sup>1</sup></th><th>Self-Taught<sup>2</sup></th><th>Trained<sup>3</sup></th></tr></thead><tbody><tr><td>15 years</td><td><p>+1d4 years<br />(16 – 19 years)</p></td><td><p>+1d6 years<br />(16 – 21 years)</p></td><td><p>+2d6 years<br />(17 – 27 years)</p></td></tr></tbody></table><p><sup>1</sup> This category includes barbarians, oracles, rogues, and sorcerers.<br /><sup>2</sup> This category includes bards, cavaliers, fighters, gunslingers, paladins, rangers, summoners, and witches.<br /><sup>3</sup> This category includes alchemists, clerics, druids, inquisitors, magi, monks, and wizards.</p><h2>Height and Weight</h2><table><thead><tr><th>Gender</th><th>Base Height</th><th>Height Modifier</th><th>Base Weight</th><th>Weight Modifier</th></tr></thead><tbody><tr><td>Male</td><td>Varies.</td><td><p>Varies</p></td><td>Varies</td><td><p>Varies</p></td></tr><tr><td>Female</td><td>Varies.</td><td><p>Varies</p></td><td>Varies</td><td><p>Varies</p></td></tr></tbody></table><h2>Standard Racial Traits</h2><ul><li><strong>Fluid Ability Score Modifiers</strong>: Mimeo Folk characters gain a +2 racial bonus to one ability score of their choice. Mimeo Folk can change their racial ability score bonus as a full round action.</li><li><strong>Type</strong>: Mimeo Folk are <em>humanoids</em> with the <em>shapechanger</em> subtypes.</li><li><strong>Size</strong>: Mimeo Folk are generally Medium creatures and thus have no bonuses or penalties due to their size.</li><li><strong>Base Speed</strong>: Mimeo Folk have a base speed of 30 feet.</li><li><strong>Languages</strong>: Mimeo Folk begin play speaking Common and their non-mimics parents racial language. Mimeo Folk with high <em>Intelligence</em> scores can learn any other language except Druidic.</li></ul><h3>Racial Traits</h3><ul><li><strong>Slippery Mind</strong>: Mimeo Folk gain a +2 racial bonus on saving throws against sleep and charm effects as their minds are constantly shifting it’s hard to control.</li><li><strong>Empathic Subtlety</strong>: +2 racial bonus on Bluff, Intimidate, and Sense Motive checks: Mimeo Folk are inherently skilled in deception and intimidation; as they can intuitively read body language and attitude with surprising accuracy.</li><li><strong>Minor Change Shape</strong> (Ex): Mimeo Folk have the extraordinary ability to alter their appearance as though using a disguise self-spell that affects their bodies but not their possessions. This ability is not an illusory effect but a minor physical alteration of a Mimeo Folk's facial features, skin color and texture, and size, within the limits described for the spell. A Mimeo Folk can use this ability at will, and the alteration lasts until he changes shape again. A Mimeo Folk reverts to his natural form when killed. When using this ability to create a disguise, a Mimeo Folk receives a +10 circumstance bonus on Disguise checks. Using this ability is a full-round action.</li></ul><h3>Alternate Racial Traits</h3><ul><li id=\"mwFg\"><p><strong id=\"mwFw\">Body Maw:</strong> Sharing the ability of their mimic parent, these Mimeo Folk have the ability to grow functioning jaws around their body. But lose the subtle nature of dealing with others. Mimeo Folk with this trait gain a bite attack that deals 1d4 damage except this attack can come from any part of the Mimeo Folks body, Mimeo Folk automatically do this damage when grappling or being grappled. This replaces Empathic Subtlety</p></li><li id=\"mwGA\"><strong id=\"mwGQ\">Body Stitching</strong>: By twisting and shaping their body Mimeo Folk can partially heal themselves as a swift action gaining fast healing 3 a number of rounds equal to twice their hit dice. This replaces Slippery Mind</li><li id=\"mwGg\"><strong id=\"mwGw\">Body Sculptor</strong>: Some Mimeo Folk have trouble copying the fine features of other humanoids and only disguise their true form with one they have trouble deviating from however they can make extreme changes to their overall body. Such Mimeo Folk gain an additional +2 Racial bonus to a different ability score that can be changed as a Full Round action This changes Minor Change Shape and replaces Slippery Mind.</li><li><strong>Small Parent : </strong>Mimeo Folk whose non mimic parent is small size causes the Mimeo Folk to also be small sized. Change size to small and change bonuses based on size such as CMB, Stealth, and carrying capacity but otherwise remain statistacly the same.</li></ul>",
+      "instructions": ""
+    },
+    "tags": [
+      "Rare",
+      "Eastern (Tian Xia)"
+    ],
+    "changes": [
+      {
+        "type": "racial",
+        "_id": "1MPZUdUm",
+        "operator": "add",
+        "priority": 0,
+        "formula": "2",
+        "target": "skill.blf"
+      },
+      {
+        "type": "racial",
+        "operator": "add",
+        "priority": 0,
+        "formula": "2",
+        "target": "skill.sen",
+        "_id": "ZtEnZS8C"
+      },
+      {
+        "type": "racial",
+        "operator": "add",
+        "priority": 0,
+        "formula": "2",
+        "target": "skill.int",
+        "_id": "l4E4GZ2U"
+      }
+    ],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [
+      {
+        "text": "+2 Bonus vs Charm and Sleep Effects",
+        "target": "allSavingThrows"
+      }
+    ],
+    "links": {
+      "children": []
+    },
+    "armorProf": [],
+    "weaponProf": [],
+    "languages": [
+      "common",
+      "sylvan"
+    ],
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "size": "med",
+    "speeds": {
+      "land": 30,
+      "fly": null,
+      "flyManeuverability": "",
+      "swim": null,
+      "climb": null,
+      "burrow": null
+    },
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "creatureSubtypes": [
+      "shapechanger",
+      "Mimeo Folk"
+    ],
+    "sources": [
+      {
+        "id": "PZO9280",
+        "pages": "245"
+      }
+    ],
+    "quadruped": false,
+    "classSkills": {
+      "acr": false,
+      "apr": false,
+      "art": false,
+      "blf": false,
+      "clm": false,
+      "crf": false,
+      "dip": false,
+      "dev": false,
+      "dis": false,
+      "esc": false,
+      "fly": false,
+      "han": false,
+      "hea": false,
+      "int": false,
+      "kar": false,
+      "kdu": false,
+      "ken": false,
+      "kge": false,
+      "khi": false,
+      "klo": false,
+      "kna": false,
+      "kno": false,
+      "kpl": false,
+      "kre": false,
+      "lin": false,
+      "lor": false,
+      "per": false,
+      "prf": false,
+      "pro": false,
+      "rid": false,
+      "sen": false,
+      "slt": false,
+      "spl": false,
+      "ste": false,
+      "sur": false,
+      "swm": false,
+      "umd": false
+    }
+  },
+  "type": "race",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "6WAxrsflClmoJCjN": 3
+  },
+  "flags": {},
+  "_id": "ROMZNPsmWgMwl4qY",
+  "sort": 300000,
+  "_key": "!items!ROMZNPsmWgMwl4qY"
+}

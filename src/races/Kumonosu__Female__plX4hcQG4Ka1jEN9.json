@@ -1,0 +1,146 @@
+{
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.350",
+    "systemId": "pf1",
+    "systemVersion": "11.8",
+    "createdTime": 1776402156728,
+    "modifiedTime": 1776423236072,
+    "lastModifiedBy": "6WAxrsflClmoJCjN"
+  },
+  "folder": null,
+  "img": "modules/axial-campaign-content/Icons/Kumonosu%20Icon.png",
+  "name": "Kumonosu (Female)",
+  "system": {
+    "description": {
+      "value": "<h2>Starting Age</h2><table><thead><tr><th>Adulthood</th><th>Intuitive<sup>1</sup></th><th>Self-Taught<sup>2</sup></th><th>Trained<sup>3</sup></th></tr></thead><tbody><tr><td>12 years</td><td><p>+1d4 years<br />(15 – 18 years)</p></td><td><p>+1d6 years<br />(15 – 20 years)</p></td><td><p>+2d6 years<br />(16 – 26 years)</p></td></tr></tbody></table><p><sup>1</sup> This category includes barbarians, oracles, rogues, and sorcerers.<br /><sup>2</sup> This category includes bards, cavaliers, fighters, gunslingers, paladins, rangers, summoners, and witches.<br /><sup>3</sup> This category includes alchemists, clerics, druids, inquisitors, magi, monks, and wizards.</p><h2>Height and Weight</h2><table><thead><tr><th>Gender</th><th>Base Height</th><th>Height Modifier</th><th>Base Weight</th><th>Weight Modifier</th></tr></thead><tbody><tr><td></td><td></td><td><p></p></td></tr><tr><td>Female</td><td>6 ft. 2 in.</td><td><p>+2d4 in.<br />(6 ft. 3 in. – 6 ft 10 ft.)</p></td><td>150 lbs.</td><td><p>+(2d10 x 5 lbs.)<br />(150 – 250 lbs.)</p></td></tr></tbody></table><h2>Standard Racial Traits</h2><ul><li><strong>Ability Score Modifiers</strong>: Female Kumonosu are bigger and coldly inteligent compared their male counterparts. Female Kumonso gain a +2 Strength +2 Inteligene but a -2 Charisma.</li><li><strong>Type:</strong> Kumonosu are <em>humanoids</em> that also count as Vermin.</li><li><strong>Size</strong>: Kumonosu are Medium creatures and thus have no bonuses or penalties due to their size.</li><li><strong>Base Speed</strong>: Kumonosu have a base speed of 30 feet and climb speed of 10ft.</li><li><strong>Languages:</strong> Kumonosu begin play speaking only Common. Kumonosu with high <em>Intelligence</em> scores can choose from the following: Aklo, Dwarven, Elves, Gnome, and Undercommon.</li></ul><h3>Defense Racial Traits</h3><ul><li><strong>Web Walker: </strong>Kumonosu use their spider legs to navigate webs and thus their movement is not hampered by webs natural or magical.</li><li><strong>Multi Eyed</strong>: Kumonosu reduce bonuses creatures gain by flanking her by -1. In addition they gain a +4 bonus against being feinted.</li></ul><h3>Spell like Ability</h3><ul><li><strong>Web Trap</strong> (Ex): Female Kumonosu can produce the similar effects of Web 1/day and an additional time a day for every 4 hit dice (It's durations Hit Dice is 10 mins x Hit dice, Reflex DC 10 + Half Hit Dice + Constitution modifier).</li></ul><h3>Senses Racial Traits</h3><ul><li><strong>Darkvision: </strong>Kumonosu can see perfectly in the dark up to 30 feet.</li><li><strong>Low-Light Vision</strong>: Kumonosu can see twice as far as humans in conditions of dim light.</li></ul><h3>Alternate Racial Traits</h3><ul><li><p><strong>Impaling Legs</strong>: Such Kumonosus legs have grown strong and sharp enough to be able to be used as natural weapons, but lack the precision to navigate webs. They gain 4 secondary leg natural attacks that deal 1d4 piercing damage. This replaces Kumonosu Climb Speed and Web Walker abilities.</p></li><li><p><strong>Fangs:</strong> A kumonosu sometimes develops powerful fangs for active hunting. Such Kumonodu gain a secondary bite atack that deals 1d3 damage. And whenever the Kumonosu succesfully grapple a creature she can automatically deal her normal bite damage. This Replaces Multi Eyed.</p></li><li><p><strong>Jumping Spider</strong>: Some Kumonsu dont rely on their webs and instead leap at their prey from large distances. As a Fullround Action a Kumonosu can jump in a straight line up to twice her speed and up to half her speed verticaly at a target and make a single melee attack on that creature with a +2 bonus. This replaces Web Trap</p></li><li><p><strong>Tremorsense</strong>: Some Kumonosu rely more on their delicate senses to detect creatures Gaining tremorsense 30ft. This replaces Darkvision and Low-light Vision.</p></li></ul>",
+      "instructions": ""
+    },
+    "tags": [
+      "Uncommon"
+    ],
+    "changes": [
+      {
+        "_id": "1c9yizh6",
+        "formula": "2",
+        "target": "str",
+        "type": "racial",
+        "operator": "add",
+        "priority": 0
+      },
+      {
+        "_id": "mcpkvw3o",
+        "formula": "-2",
+        "target": "cha",
+        "type": "racial",
+        "operator": "add",
+        "priority": 0
+      },
+      {
+        "_id": "3blr09pl",
+        "formula": "2",
+        "target": "int",
+        "type": "base",
+        "operator": "add",
+        "priority": 0
+      }
+    ],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [],
+    "links": {
+      "children": []
+    },
+    "armorProf": [],
+    "weaponProf": [],
+    "languages": [
+      "common"
+    ],
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "size": "med",
+    "speeds": {
+      "land": 30,
+      "fly": null,
+      "flyManeuverability": "average",
+      "swim": null,
+      "climb": 10,
+      "burrow": null
+    },
+    "creatureTypes": [
+      "humanoid",
+      "vermin"
+    ],
+    "creatureSubtypes": [],
+    "classSkills": {
+      "ste": true,
+      "acr": false,
+      "apr": false,
+      "art": false,
+      "blf": false,
+      "clm": false,
+      "crf": false,
+      "dip": false,
+      "dev": false,
+      "dis": false,
+      "esc": false,
+      "fly": false,
+      "han": false,
+      "hea": false,
+      "int": false,
+      "kar": false,
+      "kdu": false,
+      "ken": false,
+      "kge": false,
+      "khi": false,
+      "klo": false,
+      "kna": false,
+      "kno": false,
+      "kpl": false,
+      "kre": false,
+      "lin": false,
+      "lor": false,
+      "per": false,
+      "prf": false,
+      "pro": false,
+      "rid": false,
+      "sen": false,
+      "slt": false,
+      "spl": false,
+      "sur": false,
+      "swm": false,
+      "umd": false
+    },
+    "sources": [
+      {
+        "id": "PZO9280",
+        "pages": "245"
+      }
+    ],
+    "quadruped": false
+  },
+  "type": "race",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "6WAxrsflClmoJCjN": 3
+  },
+  "flags": {},
+  "_id": "plX4hcQG4Ka1jEN9",
+  "sort": 400000,
+  "_key": "!items!plX4hcQG4Ka1jEN9"
+}

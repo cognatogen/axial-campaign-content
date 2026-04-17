@@ -1,0 +1,188 @@
+{
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.350",
+    "systemId": "pf1",
+    "systemVersion": "11.8",
+    "createdTime": 1775875640041,
+    "modifiedTime": 1776414676182,
+    "lastModifiedBy": "6WAxrsflClmoJCjN"
+  },
+  "folder": null,
+  "img": "modules/axial-campaign-content/Icons/Neanderhal%20Icon.png",
+  "name": "Neanderthal",
+  "system": {
+    "description": {
+      "value": "<h2>Starting Age</h2><table><thead><tr><th>Adulthood</th><th>Intuitive<sup>1</sup></th><th>Self-Taught<sup>2</sup></th><th>Trained<sup>3</sup></th></tr></thead><tbody><tr><td>15 years</td><td><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">+1d4 years</span></p><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">(16 – 19 years)</span></p></td><td><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">+1d6 years</span></p><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">(16 – 21 years)</span></p></td><td><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">+2d6 years</span></p><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">(17 – 27 years)</span></p></td></tr></tbody></table><p><sup>1</sup> This category includes barbarians, oracles, rogues, and sorcerers.<br /><sup>2</sup> This category includes bards, cavaliers, fighters, gunslingers, paladins, rangers, summoners, and witches.<br /><sup>3</sup> This category includes alchemists, clerics, druids, inquisitors, magi, monks, and wizards.</p><h2>Height and Weight</h2><table><thead><tr><th>Gender</th><th>Base Height</th><th>Height Modifier</th><th>Base Weight</th><th>Weight Modifier</th></tr></thead><tbody><tr><td>Male</td><td><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">4 ft. 8 in.</span></td><td><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">+2d10 in.</span></p><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">(5 ft – 6 ft. 6 in.)</span></p></td><td>140lbs.</td><td><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">+(2d10×5 lbs.)</span></p><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">(140 – 230 lbs.)</span></p></td></tr><tr><td>Female</td><td><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(0, 0, 0, 0.05);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">4 ft. 3 in.</span></td><td><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(255, 255, 255, 0.2);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">+2d10 in.</span></p><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(255, 255, 255, 0.2);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">(4 ft. 7 in. – 6 ft. 1 in.)</span></p></td><td>105 lbs.</td><td><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(255, 255, 255, 0.2);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">+(2d10×5 lbs.)</span></p><p><span style=\"color:rgb(25, 24, 19);font-family:Signika, 'Palatino Linotype', sans-serif;font-size:13px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;background-color:rgba(255, 255, 255, 0.2);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;display:inline !important;float:none\">(105 – 195 lbs.)</span></p></td></tr></tbody></table><h2>Standard Racial Traits</h2><ul><li><strong>Ability Score Modifiers</strong>: Neanderthals are very strong and hardy, but their minds have not evolved well as their human cousins. +2 Strength, +4 Con -4 Intelligence -2 Charisma.</li><li><strong>Type</strong>: Neanderthals are humanoids that count as both Neanderthals and Humans subtypes.</li><li><strong>Size</strong>: Aasimars are Medium creatures and thus have no bonuses or penalties due to their size.</li><li><strong>Base Speed</strong>: Aasimars have a base speed of 30 feet.</li><li><strong>Languages</strong>: Neanderthals begin play speaking common albeit with limited vocabulary, Neanderthals with high Intelligence scores can choose from the following: Dwarven, Giant and Orc.</li></ul><h3>Racial Traits</h3><ul><li><strong>Snowy Traveler</strong>: While wearing fur or clothing or suited for cold environments Neanderthals don't need to roll survival checks against cold weather below -20°F and gain a +4 checks instead on cold weather over -20°F.</li><li><strong>Thick Skin</strong>: Neanderthals have tough skin and thick bones, which give them a +1 natural armor bonus.</li><li><strong>Primitive Weapon Mastery</strong>: +1 on attack rolls with all types of Spears, Axes and Clubs</li><li><strong>Survivalist</strong>: +2 on Perception and Survival Checks.</li><li><strong>Human Blooded</strong>: Neanderthals count as Humans for the purposes of effects.</li></ul><h3>Senses Racial Traits</h3><ul><li><strong>Low-light Vision</strong>: Neanderthals can see twice as far as humans in conditions of dim light.</li></ul><h3>Alternate Racial Traits</h3><ul><li><strong>Warrior of the Red Flower</strong>: By wielding flaming clubs they chase of the beasts in the dark. Neanderthals with this trait treat torches as Clubs that deal an additional 1d4 fire damage while the torch is lit. Such torches can be enhanced magically, though the resin and rags must be replaced after an hour of burning. This trait replaces Primitive Weapon Mastery</li><li><strong>Hardy Survivor</strong>: Some Neanderthals have adapted to numerous environments and quite capable of surviving in most biomes. Such Neanderthals Gain Endurance as a bonus Feat. This Trait Replaces Snowy Traveler.</li><li><strong>Giant Hunter</strong>: These Neanderthals charge in headfirst against giant Beasts and monsters catching them off-guard with brazen ferocity. These Neanderthals gain a +1 bonus on attack and damage rolls for each size category a creature is larger than them. Taking this trait replaces Thick Skin and the Survivalist Trait.</li></ul>",
+      "instructions": ""
+    },
+    "tags": [
+      "Uncommon"
+    ],
+    "changes": [
+      {
+        "_id": "9znnwx5o",
+        "formula": "2",
+        "target": "str",
+        "type": "racial",
+        "operator": "add",
+        "priority": 0
+      },
+      {
+        "_id": "78f2uhd2",
+        "formula": "4",
+        "target": "con",
+        "type": "racial",
+        "operator": "add",
+        "priority": 0
+      },
+      {
+        "_id": "z8dsccn8",
+        "formula": "-4",
+        "target": "int",
+        "type": "racial",
+        "operator": "add",
+        "priority": 0
+      },
+      {
+        "_id": "9nqnt98u",
+        "formula": "-2",
+        "target": "cha",
+        "type": "racial",
+        "operator": "add",
+        "priority": 0
+      },
+      {
+        "type": "racial",
+        "_id": "4RauzdK8",
+        "operator": "add",
+        "priority": 0,
+        "formula": "2",
+        "target": "skill.per"
+      },
+      {
+        "type": "racial",
+        "operator": "add",
+        "priority": 0,
+        "formula": "2",
+        "target": "skill.sur",
+        "_id": "AKvEtiHG"
+      },
+      {
+        "type": "racial",
+        "_id": "0QjlScwl",
+        "operator": "add",
+        "priority": 0,
+        "formula": "1",
+        "target": "nac"
+      }
+    ],
+    "changeFlags": {
+      "immuneToMorale": false,
+      "loseDexToAC": false,
+      "noMediumEncumbrance": false,
+      "noHeavyEncumbrance": false,
+      "mediumArmorFullSpeed": false,
+      "heavyArmorFullSpeed": false,
+      "lowLightVision": false,
+      "seeInvisibility": false,
+      "seeInDarkness": false
+    },
+    "contextNotes": [
+      {
+        "text": "+4 on Fortitude saves against Cold weather environments checks.",
+        "target": "fort"
+      },
+      {
+        "text": "+1 on attack rules when using simple clubs, and spears.",
+        "target": "attack"
+      }
+    ],
+    "links": {
+      "children": []
+    },
+    "armorProf": [],
+    "weaponProf": [],
+    "languages": [
+      "common"
+    ],
+    "flags": {
+      "boolean": {},
+      "dictionary": {}
+    },
+    "scriptCalls": [],
+    "size": "med",
+    "speeds": {
+      "land": 30,
+      "fly": null,
+      "flyManeuverability": "",
+      "swim": null,
+      "climb": null,
+      "burrow": null
+    },
+    "creatureTypes": [
+      "humanoid"
+    ],
+    "creatureSubtypes": [
+      "native"
+    ],
+    "sources": [
+      {
+        "id": "PZO9280",
+        "pages": "238"
+      }
+    ],
+    "quadruped": false,
+    "classSkills": {
+      "acr": false,
+      "apr": false,
+      "art": false,
+      "blf": false,
+      "clm": false,
+      "crf": false,
+      "dip": false,
+      "dev": false,
+      "dis": false,
+      "esc": false,
+      "fly": false,
+      "han": false,
+      "hea": false,
+      "int": false,
+      "kar": false,
+      "kdu": false,
+      "ken": false,
+      "kge": false,
+      "khi": false,
+      "klo": false,
+      "kna": false,
+      "kno": false,
+      "kpl": false,
+      "kre": false,
+      "lin": false,
+      "lor": false,
+      "per": false,
+      "prf": false,
+      "pro": false,
+      "rid": false,
+      "sen": false,
+      "slt": false,
+      "spl": false,
+      "ste": false,
+      "sur": false,
+      "swm": false,
+      "umd": false
+    }
+  },
+  "type": "race",
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0,
+    "3WoNmkSyyvMHG5MQ": 3
+  },
+  "_id": "gDaPUlF3c6LLOE4h",
+  "sort": 900000,
+  "_key": "!items!gDaPUlF3c6LLOE4h"
+}
