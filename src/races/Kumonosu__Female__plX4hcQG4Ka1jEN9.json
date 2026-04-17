@@ -7,11 +7,11 @@
     "systemId": "pf1",
     "systemVersion": "11.8",
     "createdTime": 1776402156728,
-    "modifiedTime": 1776423236072,
+    "modifiedTime": 1776468770293,
     "lastModifiedBy": "6WAxrsflClmoJCjN"
   },
   "folder": null,
-  "img": "modules/axial-campaign-content/Icons/Kumonosu%20Icon.png",
+  "img": "modules/axial-campaign-content/img/item/icons/Kumonosu%20Icon.png",
   "name": "Kumonosu (Female)",
   "system": {
     "description": {

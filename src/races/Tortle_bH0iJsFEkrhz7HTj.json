@@ -7,11 +7,11 @@
     "systemId": "pf1",
     "systemVersion": "11.8",
     "createdTime": 1776414676164,
-    "modifiedTime": 1776423603689,
+    "modifiedTime": 1776468908816,
     "lastModifiedBy": "6WAxrsflClmoJCjN"
   },
   "folder": null,
-  "img": "modules/axial-campaign-content/Icons/Tortle%20Icon.png",
+  "img": "modules/axial-campaign-content/img/item/icons/Tortle%20Icon.png",
   "name": "Tortle",
   "system": {
     "description": {

@@ -7,11 +7,11 @@
     "systemId": "pf1",
     "systemVersion": "11.8",
     "createdTime": 1776409720357,
-    "modifiedTime": 1776414676182,
+    "modifiedTime": 1776468887166,
     "lastModifiedBy": "6WAxrsflClmoJCjN"
   },
   "folder": null,
-  "img": "modules/axial-campaign-content/Icons/Sun%20Haizi%20Icon.png",
+  "img": "modules/axial-campaign-content/img/item/icons/Sun%20Haizi%20Icon.png",
   "name": "Sun Haizi",
   "system": {
     "description": {

@@ -7,11 +7,11 @@
     "systemId": "pf1",
     "systemVersion": "11.8",
     "createdTime": 1775875640041,
-    "modifiedTime": 1776414676182,
+    "modifiedTime": 1776468829005,
     "lastModifiedBy": "6WAxrsflClmoJCjN"
   },
   "folder": null,
-  "img": "modules/axial-campaign-content/Icons/Neanderhal%20Icon.png",
+  "img": "modules/axial-campaign-content/img/item/icons/Neanderhal%20Icon.png",
   "name": "Neanderthal",
   "system": {
     "description": {

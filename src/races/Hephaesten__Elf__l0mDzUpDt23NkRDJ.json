@@ -7,11 +7,11 @@
     "systemId": "pf1",
     "systemVersion": "11.8",
     "createdTime": 1776407554968,
-    "modifiedTime": 1776414676182,
+    "modifiedTime": 1776468738340,
     "lastModifiedBy": "6WAxrsflClmoJCjN"
   },
   "folder": null,
-  "img": "modules/axial-campaign-content/Icons/Hephaesten%20Icon.png",
+  "img": "modules/axial-campaign-content/img/item/icons/Hephaesten%20Icon.png",
   "name": "Hephaesten (Elf)",
   "system": {
     "description": {
